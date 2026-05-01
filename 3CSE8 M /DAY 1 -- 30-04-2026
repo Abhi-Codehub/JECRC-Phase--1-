@@ -1,5 +1,20 @@
-// Temprature Conversion 
-// Take input in the form of Celcius and convert it into fahrenheit...
+/*
+ *  ██████╗     ██████╗ ██████╗ ██████╗ ███████╗
+ * ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
+ * ██║         ██║      ██████╔╝██████╔╝███████╗
+ * ██║         ██║      ██╔═══╝ ██╔═══╝ ╚════██║
+ * ╚██████╗    ╚██████╗ ██║     ██║     ███████║
+ *  ╚═════╝     ╚═════╝ ╚═╝     ╚═╝     ╚══════╝
+ * ----------------------------------------------
+ * 🚀 16-DAY MASTERCLASS | DAY 01
+ * 👨‍🏫 INSTRUCTOR: ABHISHEK AGGARWAL
+ * ----------------------------------------------
+ */
+
+// ==============================================
+// 💎 PROBLEM 01: TEMPERATURE CONVERSION 🌡️
+// 📝 Task: Take Celsius input and convert to Fahrenheit
+// ==============================================
 
 #include<iostream>
 using namespace std;
@@ -16,8 +31,10 @@ int main(){
     
 }
 
-
-// GLOBAL VS LOCAL VARIABLE
+// ==============================================
+// 💎 PROBLEM 02: GLOBAL VS LOCAL VARIABLE 🌐
+// 📝 Task: Demonstrate scope and type casting
+// ==============================================
 
 #include<iostream>
 using namespace std;
@@ -36,8 +53,10 @@ int main(){
     
 }
 
-// Problem 3
-// Logical and relational Operators 
+// ==============================================
+// 💎 PROBLEM 03: LOGICAL & RELATIONAL OPERATORS ⚖️
+// 📝 Task: Check for Equilateral Triangle validity
+// ==============================================
 
 #include<iostream>
 using namespace std;
@@ -52,8 +71,10 @@ int main() {
     
 }
 
-// Problem 4
-// Swap values of 2 variables using 3rd variable
+// ==============================================
+// 💎 PROBLEM 04: THE SWAP LOGIC 🔄
+// 📝 Task: Exchange values using a temporary variable
+// ==============================================
 
 #include<iostream>
 using namespace std;
@@ -72,9 +93,11 @@ int main() {
     return 0;
 }
 
+// ==============================================
+// 💎 PROBLEM 05: AREA OF SHAPES 📐
+// 📝 Task: Selection logic for Circle, Rect, & Triangle
+// ==============================================
 
-// Area of Shapes
-// 1 -- circle, 2 == rectangle, 3-- triangle
 #include<iostream>
 using namespace std;
 
@@ -101,8 +124,11 @@ int main() {
     
 }
 
-// sum and average of 3 numbers 
-// take input from the users and find sum and average 
+// ==============================================
+// 💎 PROBLEM 06: SUM & AVERAGE 📊
+// 📝 Task: Calculate total and mean of 3 numbers
+// ==============================================
+
 #include<iostream>
 using namespace std;
 
@@ -120,8 +146,11 @@ int main() {
     return 0;
 }
 
+// ==============================================
+// 💎 PROBLEM 07: LOGIN CREDENTIALS 🔐
+// 📝 Task: Verify ID and Password with logic gates
+// ==============================================
 
-// Login Credential Program 
 #include<iostream>
 using namespace std;
 
@@ -141,3 +170,9 @@ int main() {
     cout << "Access Denied" << !isGranted << endl;
     return 0;
 }
+
+/*
+ * ----------------------------------------------
+ * ✅ END OF DAY 01 CODEBASE
+ * ----------------------------------------------
+ */
