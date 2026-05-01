@@ -77,3 +77,45 @@ int main() {
     return 0;
 }
 
+// Problem 5 -- Continue Statement 
+// Print 1 to N and avoid those number which are divisible by 3
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cin >> n;
+    
+//     for(int i = 1; i <= n; i++) {
+//         if( i % 3 == 0){
+//             continue;
+//         }
+//         cout << i << " ";
+//     }
+//     return 0;
+// }
+
+// Problem 6 -- Break Statement 
+// We have to add numbers until we get a negative number
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    int sum = 0;
+    
+    while(true) {
+       cin >> n;
+       
+       if(n < 0){
+           break;
+       }
+       sum = sum + n;
+    }
+    cout << sum;
+    return 0;
+}
+
+
