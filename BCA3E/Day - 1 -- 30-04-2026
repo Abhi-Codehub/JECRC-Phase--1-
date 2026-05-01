@@ -1,0 +1,178 @@
+/*
+ *  ██████╗     ██████╗ ██████╗ ██████╗ ███████╗
+ * ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
+ * ██║         ██║      ██████╔╝██████╔╝███████╗
+ * ██║         ██║      ██╔═══╝ ██╔═══╝ ╚════██║
+ * ╚██████╗    ╚██████╗ ██║     ██║     ███████║
+ *  ╚═════╝     ╚═════╝ ╚═╝     ╚═╝     ╚══════╝
+ * ----------------------------------------------
+ * 🚀 16-DAY MASTERCLASS | DAY 01
+ * 👨‍🏫 INSTRUCTOR: ABHISHEK AGGARWAL
+ * ----------------------------------------------
+ */
+
+// ==============================================
+// 💎 PROBLEM 01: TEMPERATURE CONVERSION 🌡️
+// 📝 Task: Take Celsius input and convert to Fahrenheit
+// ==============================================
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    
+    double celcius;
+    double fahrenheit;
+    cin >> celcius;
+    fahrenheit = (celcius * 9.0 / 5.0) + 32.0;
+    cout << fahrenheit << endl;
+    
+    return 0;
+    
+}
+
+// ==============================================
+// 💎 PROBLEM 02: GLOBAL VS LOCAL VARIABLE 🌐
+// 📝 Task: Demonstrate scope and type casting
+// ==============================================
+
+#include<iostream>
+using namespace std;
+// global variable
+int globalVaribale = 100;
+int main(){
+    // local variable
+    int userInput;
+    float result;
+    
+    cin >> userInput;
+    result = (double)globalVaribale / userInput;
+    
+    cout << result << endl;
+    return 0;
+    
+}
+
+// ==============================================
+// 💎 PROBLEM 03: LOGICAL & RELATIONAL OPERATORS ⚖️
+// 📝 Task: Check for Equilateral Triangle validity
+// ==============================================
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int side1, side2, side3;
+    cin >> side1 >> side2 >> side3;
+    
+    bool isEqui = (side1 > 0) && (side1 == side2) && (side2 == side3);
+    cout << isEqui << endl;
+    return 0;
+    
+}
+
+// ==============================================
+// 💎 PROBLEM 04: THE SWAP LOGIC 🔄
+// 📝 Task: Exchange values using a temporary variable
+// ==============================================
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int a;
+    int b;
+    
+    cin >> a >> b;
+    // swapping Logic
+    int temp = a;
+    a = b;
+    b = temp;
+    
+    cout << a << "\n" << b << endl;
+    return 0;
+}
+
+// ==============================================
+// 💎 PROBLEM 05: AREA OF SHAPES 📐
+// 📝 Task: Selection logic for Circle, Rect, & Triangle
+// ==============================================
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int choice;
+    cin >> choice;
+    
+    if(choice == 1){
+        double radius;
+        cin >> radius;
+        cout << 3.14 * radius * radius << endl;
+    } else if (choice == 2) {
+        double length, width;
+        cin >> length >> width;
+        cout << length * width<< endl;
+    } else if (choice == 3) {
+        double base, height;
+        cin >> base >> height;
+        cout << 0.5 * base * height << endl;
+    } else {
+        cout << "invalid Choice" << endl;
+    }
+    return 0;
+    
+}
+
+// ==============================================
+// 💎 PROBLEM 06: SUM & AVERAGE 📊
+// 📝 Task: Calculate total and mean of 3 numbers
+// ==============================================
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    int a, b, c, sum;
+    float avergae;
+    
+    cin >> a >> b >> c;
+    sum = a + b + c;
+    avergae = sum / 3.0;
+    
+    cout << sum << endl;
+    cout << avergae << endl;
+    
+    return 0;
+}
+
+// ==============================================
+// 💎 PROBLEM 07: LOGIN CREDENTIALS 🔐
+// 📝 Task: Verify ID and Password with logic gates
+// ==============================================
+
+#include<iostream>
+using namespace std;
+
+int main() {
+    const int userId = 1234;
+    const int password = 0000;
+    
+    int inputID, inputPassword;
+    cout << "Enter your ID here";
+    cin >> inputID;
+    cout << "Enter your password here";
+    cin >> inputPassword;
+    
+    bool isGranted =  (userId == inputID) && (password == inputPassword);
+    
+    cout << "Access Granted" << isGranted << endl;
+    cout << "Access Denied" << !isGranted << endl;
+    return 0;
+}
+
+/*
+ * ----------------------------------------------
+ * ✅ END OF DAY 01 CODEBASE
+ * ----------------------------------------------
+ */
