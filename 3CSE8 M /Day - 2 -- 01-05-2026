@@ -1,5 +1,21 @@
-// Problem 1 -- If condition 
-// to verify user's age wether eligible for vote or not ?
+/*
+ *  ██████╗     ██████╗ ██████╗ ██████╗ ███████╗
+ * ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
+ * ██║         ██║      ██████╔╝██████╔╝███████╗
+ * ██║         ██║      ██╔═══╝ ██╔═══╝ ╚════██║
+ * ╚██████╗    ╚██████╗ ██║     ██║     ███████║
+ *  ╚═════╝     ╚═════╝ ╚═╝     ╚═╝     ╚══════╝
+ * ----------------------------------------------
+ * 🚀 16-DAY MASTERCLASS | DAY 02
+ * 👨‍🏫 INSTRUCTOR: ABHISHEK AGGARWAL
+ * ----------------------------------------------
+ */
+
+// ==============================================
+// 💎 PROBLEM 01: THE IF CONDITION 🚦
+// 📝 Task: Verify if a user is eligible to vote
+// ==============================================
+
 #include <iostream>
 using namespace std;
 
@@ -14,8 +30,11 @@ int main() {
     return 0;
 }
 
-// Problem 2 -- If - else condition 
-// to verify user's age wether eligible for vote or not ?
+// ==============================================
+// 💎 PROBLEM 02: THE IF-ELSE BRANCH 🛤️
+// 📝 Task: Handle both eligible and ineligible cases
+// ==============================================
+
 #include <iostream>
 using namespace std;
 
@@ -33,15 +52,17 @@ int main() {
     return 0;
 }
 
-// Problem 3 -- Nested If - else condition 
-// to verify user's age wether eligible for vote or not ?
+// ==============================================
+// 💎 PROBLEM 03: NESTED IF-ELSE LOGIC 🕸️
+// 📝 Task: Advanced validation for seniors and invalid ages
+// ==============================================
+
 #include <iostream>
 using namespace std;
 
 int main() {
     int age;
     cin >> age;
-    
     
     if(age >= 18) {
         if (age >= 100) {
@@ -59,8 +80,10 @@ int main() {
     return 0;
 }
 
-// Problem 4 -- Ternary Operator 
-// Find the Greater number among 2
+// ==============================================
+// 💎 PROBLEM 04: TERNARY OPERATOR ⚡
+// 📝 Task: Find the greater number in a single line
+// ==============================================
 
 #include <iostream>
 using namespace std;
@@ -77,27 +100,31 @@ int main() {
     return 0;
 }
 
-// Problem 5 -- Continue Statement 
-// Print 1 to N and avoid those number which are divisible by 3
+// ==============================================
+// 💎 PROBLEM 05: CONTINUE STATEMENT ⏭️
+// 📝 Task: Print 1 to N while skipping multiples of 3
+// ==============================================
 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int main() {
-//     int n;
-//     cin >> n;
+int main() {
+     int n;
+     cin >> n;
     
-//     for(int i = 1; i <= n; i++) {
-//         if( i % 3 == 0){
-//             continue;
-//         }
-//         cout << i << " ";
-//     }
-//     return 0;
-// }
+     for(int i = 1; i <= n; i++) {
+         if( i % 3 == 0){
+             continue;
+         }
+         cout << i << " ";
+     }
+     return 0;
+}
 
-// Problem 6 -- Break Statement 
-// We have to add numbers until we get a negative number
+// ==============================================
+// 💎 PROBLEM 06: BREAK STATEMENT 🛑
+// 📝 Task: Continuous sum until a negative number is entered
+// ==============================================
 
 #include <iostream>
 using namespace std;
@@ -118,39 +145,39 @@ int main() {
     return 0;
 }
 
+// ==============================================
+// 💎 PROBLEM 07: SMART HOME SYSTEM 🏠
+// 📝 Task: Logic for day/night and motion detection
+// ==============================================
 
-// Problem 7 -- Smart home lighting system 
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// int main() {
-//     string dayOrNight;
-//     bool motionDetected;
+int main() {
+     string dayOrNight;
+     bool motionDetected;
     
-//     cout << "is it Day or Night? : ";
-//     cin >> dayOrNight;
-//     cout << "Is Motion Detected? (1 For Yes, 0 For No): ";
-//     cin >> motionDetected;
+     cout << "is it Day or Night? : ";
+     cin >> dayOrNight;
+     cout << "Is Motion Detected? (1 For Yes, 0 For No): ";
+     cin >> motionDetected;
     
-//     if(dayOrNight == "Night" || dayOrNight == "night"){
-//         if(motionDetected) {
-//             cout << "Turn on the LED light with 100% brightness..";
-//         } else {
-//             cout << "Turn on the LED light with only 10Percent of brightness..";
-//         }
-//     } else {
-//         cout << "Turn off the Lights...";
-//     }
-//     return 0;
-// }
+     if(dayOrNight == "Night" || dayOrNight == "night"){
+         if(motionDetected) {
+             cout << "Turn on the LED light with 100% brightness..";
+         } else {
+             cout << "Turn on the LED light with only 10Percent of brightness..";
+         }
+     } else {
+         cout << "Turn off the Lights...";
+     }
+     return 0;
+}
 
-
-// Problem - 8 
-// Customer support IVR system 
-// 1 -- for support 
-// 2 -- for billing 
-// 3 -- Technical issues
-// 4 -- Talk to the Agent
+// ==============================================
+// 💎 PROBLEM 08: IVR SYSTEM SWITCH 📞
+// 📝 Task: Handle customer support menu selections
+// ==============================================
 
 #include <iostream>
 using namespace std;
@@ -179,3 +206,8 @@ int main(){
     return 0;
 }
 
+/*
+ * ----------------------------------------------
+ * ✅ END OF DAY 02 CODEBASE
+ * ----------------------------------------------
+ */
