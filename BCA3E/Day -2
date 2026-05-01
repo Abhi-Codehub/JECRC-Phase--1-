@@ -1,0 +1,36 @@
+// Problem -- 1 if statement
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int age;
+//     cin >> age;
+    
+//     if(age >= 18) {
+//         cout << "Eligible for Vote...";
+//     }
+//     return 0;
+// }
+
+
+// Problem -- 2 if-else statement
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    cin >> age;
+    
+    if(age >= 18) {
+        cout << "Eligible for Vote...";
+    } else {
+        cout << "Not eligible for Vote...";
+    }
+    return 0;
+}
+
+
+
+
+
+
