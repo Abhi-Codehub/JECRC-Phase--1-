@@ -1,5 +1,21 @@
-// Problem 1 
-// Print 1 to 10 using for loop 
+/*
+ *  ██████╗     ██████╗ ██████╗ ██████╗ ███████╗
+ * ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
+ * ██║         ██║      ██████╔╝██████╔╝███████╗
+ * ██║         ██║      ██╔═══╝ ██╔═══╝ ╚════██║
+ * ╚██████╗    ╚██████╗ ██║     ██║     ███████║
+ *  ╚═════╝     ╚═════╝ ╚═╝     ╚═╝     ╚══════╝
+ * ----------------------------------------------
+ * 🚀 16-DAY MASTERCLASS | DAY 03 (LOOPS)
+ * 👨‍🏫 INSTRUCTOR: ABHISHEK AGGARWAL
+ * ----------------------------------------------
+ */
+
+// ==============================================
+// 💎 PROBLEM 01: FOR LOOP BASICS 🔄
+// 📝 Task: Print numbers from 1 to 10
+// ==============================================
+
 // #include <iostream>
 // using namespace std;
 
@@ -9,8 +25,11 @@
 //     }
 // }
 
-// Problem 2 
-// Print even numbers from 0 to 10
+// ==============================================
+// 💎 PROBLEM 02: EVEN NUMBERS ⚖️
+// 📝 Task: Print even numbers from 0 to 10
+// ==============================================
+
 // #include <iostream>
 // using namespace std;
 
@@ -20,8 +39,11 @@
 //     }
 // }
 
-// Problem 3
-// Print 1 to 10 using for while loop
+// ==============================================
+// 💎 PROBLEM 03: WHILE LOOP BASICS ➰
+// 📝 Task: Print 1 to 10 using a while condition
+// ==============================================
+
 // #include <iostream>
 // using namespace std;
 
@@ -33,9 +55,10 @@
 //     }
 // }
 
-
-// Problem 4 
-// Print odd numbers from 1 to 10
+// ==============================================
+// 💎 PROBLEM 04: ODD NUMBERS ⚡
+// 📝 Task: Print odd numbers from 1 to 10 using while
+// ==============================================
 
 // #include <iostream>
 // using namespace std;
@@ -48,8 +71,10 @@
 //     }
 // }
 
-// Problem 5
-// Print 1 to 10 using do-while loop 
+// ==============================================
+// 💎 PROBLEM 05: DO-WHILE LOOP 🔃
+// 📝 Task: Ensure code runs at least once (1 to 10)
+// ==============================================
 
 // #include <iostream>
 // using namespace std;
@@ -62,8 +87,11 @@
 //     } while (i <= 10);
 // }
 
-// Problem 6 
-// Factorial of a numbers
+// ==============================================
+// 💎 PROBLEM 06: FACTORIAL CALCULATOR ❗
+// 📝 Task: Calculate n! using a reverse loop
+// ==============================================
+
 // #include <iostream>
 // using namespace std;
 
@@ -78,35 +106,13 @@
 //     cout << fact;
 // }
 
-
-// Problem 7
-// Prime numbers
+// ==============================================
+// 💎 PROBLEM 07: PRIME NUMBERS 🔢
+// 📝 Task: Determine if a number has any divisors
+// ==============================================
 
 // #include <iostream>
 // using namespace std;
-
-// // int main() {
-// //     int n;
-// //     cin >> n;
-// //     int isPrime = true;
-    
-// //     if(n < 2){
-// //         isPrime = false;
-// //     } else {
-// //         for(int i = 2; i < n; i++) {
-// //             if(n % i == 0) {
-// //                 isPrime = false;
-// //                 break;
-// //         }
-// //     } 
-// // }
-
-// //     if(isPrime) {
-// //     cout <<"It is a prime number...";
-// //     } else {
-// //     cout << "It is not a prime number...";
-// //     }
-// // }
 
 // int main() {
 //     int n;
@@ -123,10 +129,10 @@
 //     } 
 // }
 
-
-// Problem 8
-// Smart phone unlock 
-
+// ==============================================
+// 💎 PROBLEM 08: SMART PHONE UNLOCK 🔓
+// 📝 Task: Repeatedly ask for PIN until correct
+// ==============================================
 
 #include <iostream>
 using namespace std;
@@ -142,24 +148,8 @@ int main() {
     cout << "Phone Unlocked...";
 }
 
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+ * ----------------------------------------------
+ * ✅ END OF DAY 03 CODEBASE
+ * ----------------------------------------------
+ */
