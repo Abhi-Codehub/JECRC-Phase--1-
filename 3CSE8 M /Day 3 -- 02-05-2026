@@ -14,15 +14,15 @@
 
 // Problem 2 -- 
 // Print 10 to 1 using a for loop 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-int main() {
-    for(int i = 10; i >= 1; i--){
-        cout << i << " ";
-    }
-    return 0;
-}
+// int main() {
+//     for(int i = 10; i >= 1; i--){
+//         cout << i << " ";
+//     }
+//     return 0;
+// }
 
 // Problem 3 
 // Print 1 to 10 using a while loop 
@@ -42,21 +42,47 @@ int main() {
 // Problem 4 
 // Print 10 to 1 using a while loop 
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int i = 10;
+//     while (i >= 1) {
+//         cout << i << " ";
+//         i--;
+//     }
+//     return 0;
+// }
+
+// Problem 5 
+// Print 1 to 10 using a do-while loop 
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int i = 1;
+//     do {
+//         cout << i << " ";
+//         i++;
+//     } while(i <= 10);
+//     return 0;
+// }
+
+// Problem 6 
+// Print 1 to 10 using a do-while loop
+
 #include <iostream>
 using namespace std;
 
 int main() {
     int i = 10;
-    while (i >= 1) {
+    do {
         cout << i << " ";
         i--;
-    }
+    } while(i >= 1);
     return 0;
 }
-
-
-
-
 
 
 
