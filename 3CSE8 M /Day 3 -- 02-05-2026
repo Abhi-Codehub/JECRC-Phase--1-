@@ -24,7 +24,35 @@ int main() {
     return 0;
 }
 
+// Problem 3 
+// Print 1 to 10 using a while loop 
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int i = 1;
+//     while(i <= 10) {
+//         cout << i << " ";
+//         i++;
+//     }
+//     return 0;
+// }
+
+// Problem 4 
+// Print 10 to 1 using a while loop 
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int i = 10;
+    while (i >= 1) {
+        cout << i << " ";
+        i--;
+    }
+    return 0;
+}
 
 
 
