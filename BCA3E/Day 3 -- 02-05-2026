@@ -62,6 +62,71 @@
 //     } while (i <= 10);
 // }
 
+// Problem 6 
+// Factorial of a numbers
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cin >> n;
+//     int fact = 1;
+    
+//     for(int i = n; i >= 1; i--) {
+//         fact = fact * i;
+//     }
+//     cout << fact;
+// }
+
+
+// Problem 7
+// Prime numbers
+
+#include <iostream>
+using namespace std;
+
+// int main() {
+//     int n;
+//     cin >> n;
+//     int isPrime = true;
+    
+//     if(n < 2){
+//         isPrime = false;
+//     } else {
+//         for(int i = 2; i < n; i++) {
+//             if(n % i == 0) {
+//                 isPrime = false;
+//                 break;
+//         }
+//     } 
+// }
+
+//     if(isPrime) {
+//     cout <<"It is a prime number...";
+//     } else {
+//     cout << "It is not a prime number...";
+//     }
+// }
+
+int main() {
+    int n;
+    cin >> n;
+
+    for(int i = 2; i < n; i++) {
+        if(n % i == 0) {
+            cout << "It is not a prime number...";
+            break;
+        } else {
+            cout <<"It is a prime number...";
+            break;
+        }
+    } 
+}
+
+   
+
+
+
 
 
 
