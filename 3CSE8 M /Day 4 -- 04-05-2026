@@ -80,35 +80,57 @@
 // Problem 5 
 // Print a Rectangle
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int row, col;
+//     cin >> row;
+//     cin >> col;
+    
+//     for(int i = 1; i <= row; i++) {
+//         for(int j = 1; j <= col; j++) {
+//             cout <<"*";
+//         }
+//         cout <<"\n";
+//     }
+// }
+
+// Problem 6 
+// Print a hollow Square 
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     for(int i = 1; i <= 5; i++) {
+//         for(int j = 1; j <= 5; j++) {
+//             cout << " ";
+//             if(i == 1 || j == 1 || i == 5 || j == 5) {
+//                 cout << "*";
+//             } else {
+//                 cout << " ";
+//             }
+//         }
+//         cout <<"\n";
+//     }
+// }
+
+
+// Problem 7
+// Print a pyramid 
+
 #include <iostream>
 using namespace std;
 
 int main() {
-    int row, col;
-    cin >> row;
-    cin >> col;
-    
-    for(int i = 1; i <= row; i++) {
-        for(int j = 1; j <= col; j++) {
-            cout <<"*";
+    for(int i = 1; i <= 6; i++) {
+        for(int j = 6 - i; j >= 1; j--) {
+            cout <<" ";
         }
-        cout <<"\n";
+        for(int k = 1; k <= i; k++) {
+            cout << " *";
+        }
+        cout << "\n";
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
