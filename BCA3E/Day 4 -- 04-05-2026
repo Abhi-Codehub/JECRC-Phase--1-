@@ -1,5 +1,25 @@
-// Problem -- 1
-// Print number 1 to 5, 5 times 
+```cpp
+/*
+ *  ██████╗     ██████╗ ██████╗ ██████╗ ███████╗
+ * ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
+ * ██║         ██║      ██████╔╝██████╔╝███████╗
+ * ██║         ██║      ██╔═══╝ ██╔═══╝ ╚════██║
+ * ╚██████╗    ╚██████╗ ██║     ██║     ███████║
+ *  ╚═════╝     ╚═════╝ ╚═╝     ╚═╝     ╚══════╝
+ * ----------------------------------------------
+ * 🚀 16-DAY MASTERCLASS | DAY 04 (NESTED LOOPS)
+ * 👨‍🏫 INSTRUCTOR: ABHISHEK AGGARWAL
+ * ----------------------------------------------
+ */
+
+// ==============================================
+// 💎 PROBLEM 01: REPEATING NUMBER ROW 🔢
+// 📝 Task: Print numbers 1-5 in 5 consecutive rows
+// 🖼️ Pattern:
+// 12345
+// 12345
+// 12345
+// ==============================================
 
 // #include <iostream>
 // using namespace std;
@@ -13,8 +33,14 @@
 //     }
 // }
 
-// Problem -- 2
-// Print Solid Square
+// ==============================================
+// 💎 PROBLEM 02: SOLID SQUARE ⏹️
+// 📝 Task: Create a 5x5 star grid
+// 🖼️ Pattern:
+//  * * * * *
+//  * * * * *
+//  * * * * *
+// ==============================================
 
 // #include <iostream>
 // using namespace std;
@@ -28,16 +54,21 @@
 //     }
 // }
 
-// Problem -- 3
-// Print Solid Rectangle
+// ==============================================
+// 💎 PROBLEM 03: DYNAMIC RECTANGLE 🧱
+// 📝 Task: User-defined rows and columns
+// 🖼️ Pattern (3x5):
+//  * * * * *
+//  * * * * *
+//  * * * * *
+// ==============================================
 
 // #include <iostream>
 // using namespace std;
 
 // int main() {
 //     int row, col;
-//     cin >> row;
-//     cin >> col;
+//     cin >> row >> col;
     
 //     for(int i = 1; i <= row; i++) {
 //         for(int j = 1; j <= col; j++) {
@@ -47,8 +78,15 @@
 //     }
 // }
 
-// Problem -- 4
-// Print a right angled triangle
+// ==============================================
+// 💎 PROBLEM 04: RIGHT ANGLED TRIANGLE 📐
+// 📝 Task: Grow stars per row index
+// 🖼️ Pattern:
+// *
+// **
+// ***
+// ****
+// ==============================================
 
 // #include <iostream>
 // using namespace std;
@@ -62,8 +100,16 @@
 //     }
 // }
 
-// // Problem -- 5
-// // Print a hollow Square
+// ==============================================
+// 💎 PROBLEM 05: HOLLOW SQUARE 🔲
+// 📝 Task: Border stars with empty center
+// 🖼️ Pattern:
+//  *****
+//  *   *
+//  *   *
+//  *****
+// ==============================================
+
 // #include <iostream>
 // using namespace std;
 
@@ -81,41 +127,61 @@
 //     }
 // }
 
-// Problem -- 6
-// Print mirror of Right angle triangle
+// ==============================================
+// 💎 PROBLEM 06: MIRROR TRIANGLE 🪞
+// 📝 Task: Right-aligned growing triangle
+// 🖼️ Pattern:
+//     *
+//    **
+//   ***
+//  ****
+// ==============================================
 
 #include <iostream>
 using namespace std;
 
 int main() {
     for(int i = 1; i <= 5; i++) {
+        // Space logic for right alignment
         for(int j = 5 - i; j >= 1; j--) {
             cout << " ";
         } 
         for(int k = 1; k <= i; k++){
-        cout << "*";
+            cout << "*";
         }
         cout << "\n";
     }
-    
 }
 
-
-// Problem -- 7
-// Print Pyramid
+// ==============================================
+// 💎 PROBLEM 07: PYRAMID PATTERN 🔺
+// 📝 Task: Symmetric star pyramid
+// 🖼️ Pattern:
+//     *
+//    * *
+//   * * *
+//  * * * *
+// ==============================================
 
 #include <iostream>
 using namespace std;
 
 int main() {
     for(int i = 1; i <= 5; i++) {
+        // Center alignment spaces
         for(int j = 5 - i; j >= 1; j--) {
             cout << " ";
         } 
         for(int k = 1; k <= i; k++){
-        cout << " *";
+            cout << " *";
         }
         cout << "\n";
     }
-    
 }
+
+/*
+ * ----------------------------------------------
+ * ✅ END OF DAY 04 CODEBASE
+ * ----------------------------------------------
+ */
+```
