@@ -1,40 +1,114 @@
-// Problem -- 1
-// Print 1 to 10, 10 number of times 
+// // Problem -- 1
+// // Print 1 to 10, 10 number of times 
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     // number of times to print the pattern
+//     for(int i = 1; i <= 10; i++) {
+//         // this defines what to print in the pattern
+//         for(int j = 1; j <= 10; j++){
+//             cout << j << " ";
+//         }
+//         cout << "\n";
+//     }
+
+//     return 0;
+// }
+
+
+// // Problem 2 
+// // Print a Solid square 
+
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     // number of times to print the pattern
+//     for(int i = 1; i <= 10; i++) {
+//         // this defines what to print in the pattern
+//         for(int j = 1; j <= 10; j++){
+//             cout << "* ";
+//         }
+//         cout << "\n";
+//     }
+
+//     return 0;
+// }
+
+// Problem 3 
+// Print Right Angled Triangle
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cin >> n;
+//     // defines me the number of times 
+//     for(int i = 1; i <= n; i++) {
+//         for(int j = 1; j <= i; j++) {
+//             cout << "*";
+//         }
+//         cout << "\n";
+//     }
+// }
+
+// Problem 4 
+// Print Mirror of Right Angled Triangle
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     int n;
+//     cin >> n;
+//     // number of times or number of rows
+//     for(int i = 1; i <= n; i++) {
+//         // number of spaces logic is here
+//         for(int j = n - i; j >= 1; j--) {
+//             cout << " ";
+//         }
+//         for(int k = 1; k <= i; k++) {
+//             cout << "*";
+//         }
+//         cout << "\n";
+//     }
+// }
+
+// Problem 5 
+// Print a Rectangle
 
 #include <iostream>
 using namespace std;
-int main()
-{
-    // number of times to print the pattern
-    for(int i = 1; i <= 10; i++) {
-        // this defines what to print in the pattern
-        for(int j = 1; j <= 10; j++){
-            cout << j << " ";
-        }
-        cout << "\n";
-    }
 
-    return 0;
+int main() {
+    int row, col;
+    cin >> row;
+    cin >> col;
+    
+    for(int i = 1; i <= row; i++) {
+        for(int j = 1; j <= col; j++) {
+            cout <<"*";
+        }
+        cout <<"\n";
+    }
 }
 
 
-// Problem 2 
-// Print a Solid square 
 
-#include <iostream>
-using namespace std;
-int main()
-{
-    // number of times to print the pattern
-    for(int i = 1; i <= 10; i++) {
-        // this defines what to print in the pattern
-        for(int j = 1; j <= 10; j++){
-            cout << "* ";
-        }
-        cout << "\n";
-    }
 
-    return 0;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
