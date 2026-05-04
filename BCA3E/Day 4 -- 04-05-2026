@@ -50,21 +50,72 @@
 // Problem -- 4
 // Print a right angled triangle
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     for(int i = 1; i <= 5; i++) {
+//         for(int j = 1; j <= i; j++) {
+//             cout << "*";
+//         }
+//         cout <<"\n";
+//     }
+// }
+
+// // Problem -- 5
+// // Print a hollow Square
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     for(int i = 1; i <= 5; i++) {
+//         for(int j = 1; j <= 5; j++) {
+//             cout << " ";
+//             if(i == 1 || i == 5 || j == 1 || j == 5){
+//                 cout <<"*";
+//             } else {
+//                 cout << " ";
+//             }
+//         }
+//         cout << "\n";
+//     }
+// }
+
+// Problem -- 6
+// Print mirror of Right angle triangle
+
 #include <iostream>
 using namespace std;
 
 int main() {
     for(int i = 1; i <= 5; i++) {
-        for(int j = 1; j <= i; j++) {
-            cout << "*";
+        for(int j = 5 - i; j >= 1; j--) {
+            cout << " ";
+        } 
+        for(int k = 1; k <= i; k++){
+        cout << "*";
         }
-        cout <<"\n";
+        cout << "\n";
     }
+    
 }
 
 
+// Problem -- 7
+// Print Pyramid
 
+#include <iostream>
+using namespace std;
 
-
-
-
+int main() {
+    for(int i = 1; i <= 5; i++) {
+        for(int j = 5 - i; j >= 1; j--) {
+            cout << " ";
+        } 
+        for(int k = 1; k <= i; k++){
+        cout << " *";
+        }
+        cout << "\n";
+    }
+    
+}
