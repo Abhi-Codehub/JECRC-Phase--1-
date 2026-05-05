@@ -1,44 +1,44 @@
-// Problem -- 1
-// Pattern Printing Upper Right angle triangle and its opposite
-#include <iostream>
-using namespace std;
+// // Problem -- 1
+// // Pattern Printing Upper Right angle triangle and its opposite
+// #include <iostream>
+// using namespace std;
 
-int main()
-{
-    // print upper right angle triangle
-    for(int i = 1; i <= 5; i++) {
-        for(int j = 1; j <= i; j++){
-            cout << "*";
-        }
-        cout <<"\n";
-    }
+// int main()
+// {
+//     // print upper right angle triangle
+//     for(int i = 1; i <= 5; i++) {
+//         for(int j = 1; j <= i; j++){
+//             cout << "*";
+//         }
+//         cout <<"\n";
+//     }
     
-    // print lower triangle
-    for(int k = 5-1; k >= 1; k--) {
-        for(int l = 1; l <= k; l++){
-            cout << "*";
-        }
-        cout <<"\n";
-    }
+//     // print lower triangle
+//     for(int k = 5-1; k >= 1; k--) {
+//         for(int l = 1; l <= k; l++){
+//             cout << "*";
+//         }
+//         cout <<"\n";
+//     }
     
 
-    return 0;
-}
+//     return 0;
+// }
 
 // Problem -- 2
 // Function declaration and initilization 
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void printMessage() {
-    cout <<" Hi we are learning Functions... ";
-}
+// void printMessage() {
+//     cout <<" Hi we are learning Functions... ";
+// }
 
-int main() {
-    printMessage();
-    return 0;
-}
+// int main() {
+//     printMessage();
+//     return 0;
+// }
 
 // Problem 3
 // Making a function with argument and return type
@@ -58,3 +58,61 @@ int main() {
 //     cout << areaOfRectangle;
 // }
 
+
+// Problem 4
+// Types of Functions 
+// 4.1 -- No argument and no return Type
+
+// #include <iostream>
+// using namespace std;
+
+// void DoorBell(){
+//     cout << "Ting Tong...";
+// }
+
+// int main() {
+//     DoorBell();
+//     return 0;
+// }
+
+// 4.2 Argument, No return Type
+
+// #include <iostream>
+// using namespace std;
+
+// void sendText(string message){
+//     cout << message;
+// }
+
+// int main() {
+//     sendText("BJP wons...");
+//     return 0;
+// }
+
+// 4.3 No Argument, return type
+
+// #include <iostream>
+// using namespace std;
+
+// int ticketNumber(){
+//     return 101;
+// }
+
+// int main() {
+//     cout << ticketNumber();
+//     return 0;
+// }
+
+// 4.4 Argument, return type
+
+// #include <iostream>
+// using namespace std;
+
+// int currencyConversion(int amountInUSD){
+//     return amountInUSD / 100;
+// }
+
+// int main() {
+//     cout << currencyConversion(1000);
+//     return 0;
+// }
