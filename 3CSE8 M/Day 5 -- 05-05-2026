@@ -24,3 +24,18 @@ int main()
 
     return 0;
 }
+
+// Problem -- 2
+// Function declaration and initilization 
+
+#include <iostream>
+using namespace std;
+
+void printMessage() {
+    cout <<" Hi we are learning Functions... ";
+}
+
+int main() {
+    printMessage();
+    return 0;
+}
