@@ -74,36 +74,69 @@
 
 // Program 4.2 -- argument , no Return values
 
+// #include <iostream>
+// using namespace std;
+
+// void sendMessage(string message) {
+//     cout << message;
+// }
+
+// int main() {
+//     sendMessage("BJP wons...");
+// }
+
+// Program 4.3 -- No argument , Return values
+
+// #include <iostream>
+// using namespace std;
+
+// int ticketNumber(){
+//     return 101;
+// }
+
+// int main() {
+//     cout << ticketNumber();
+// }
+
+// Program 4.4 -- argument , Return values
+
+// #include <iostream>
+// using namespace std;
+
+// float currencyConvertor(float rupees) {
+//     return rupees / 95.25;
+// }
+
+// int main() {
+//     cout << currencyConvertor(200);
+// }
+
+// Program 5
+// function overloading 
+
 #include <iostream>
 using namespace std;
 
-void sendMessage(string message) {
-    cout << message;
+int add(int a, int b){
+    return a + b;
+}
+
+double add(double a, double b){
+    return a + b;
+}
+
+int add(int a, int b, int c){
+    return a + b + c;
+}
+
+float add(float a, float b, float c, float d){
+    return a + b + c + d;
 }
 
 int main() {
-    sendMessage("BJP wons...");
+    cout << add(5,2) << "\n";
+    cout << add(5.5, 7.9) <<"\n";
+    cout << add(5,2,3) << "\n";
+    cout << add(5.0, 2.3, 5.5, 7.9) <<"\n";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
