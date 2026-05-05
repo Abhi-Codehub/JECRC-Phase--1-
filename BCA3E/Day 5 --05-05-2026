@@ -1,23 +1,109 @@
 // Problem -- 1
 // Pattern Printing 
 
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+//     // Upper triangle 
+//     for(int i = 1; i <= 5; i++) {
+//         for(int j = 1;  j<= i; j++) {
+//             cout << "*";
+//         }
+//         cout <<"\n";
+//     }
+    
+//     // Lower triangle
+//     for(int i = 5 - 1;  i >= 1; i--) {
+//         for(int j = 1; j <= i; j++) {
+//             cout <<"*";
+//         }
+//         cout <<"\n";
+//     }
+// }
+
+
+// Problem 2 
+// Function making practice 
+
+// #include <iostream>
+// using namespace std;
+
+// void printMessage(){
+//     cout << "Hi we are learning Functions....";
+// }
+
+// int main() {
+//     // function calling 
+//     printMessage();
+//   return 0; 
+// }
+
+// Program 3
+// Functions with some values and some return values
+
+// #include <iostream>
+// using namespace std;
+
+// int calculateArea(int length, int width){
+//     return length * width;
+// }
+
+// int main() {
+//     int a = 12;
+//     int b = 10;
+//     int area = calculateArea(a, b);
+//     cout << area;
+// }
+
+// Program 4 
+// Types of Functions
+// Program 4.1 -- No argument , no Return values
+
+// #include <iostream>
+// using namespace std;
+
+// void bellRing(){
+//     cout << "Ting Tong...";
+// }
+
+// int main() {
+//     bellRing();
+// }
+
+
+// Program 4.2 -- argument , no Return values
+
 #include <iostream>
 using namespace std;
 
-int main() {
-    // Upper triangle 
-    for(int i = 1; i <= 5; i++) {
-        for(int j = 1;  j<= i; j++) {
-            cout << "*";
-        }
-        cout <<"\n";
-    }
-    
-    // Lower triangle
-    for(int i = 5 - 1;  i >= 1; i--) {
-        for(int j = 1; j <= i; j++) {
-            cout <<"*";
-        }
-        cout <<"\n";
-    }
+void sendMessage(string message) {
+    cout << message;
 }
+
+int main() {
+    sendMessage("BJP wons...");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
