@@ -149,3 +149,42 @@
 // }
 
 
+// Program 6
+// Pointers
+
+// #include <iostream>
+// using namespace std;
+
+// int main() {
+    
+//     int age = 24;
+    
+//     int *ptr = &age;
+    
+//     cout << age << "\n";
+//     cout << ptr << "\n";
+//     cout << *ptr <<"\n";
+    
+//     //age = 28
+//     *ptr = 28;
+//     cout << *ptr;
+// }
+
+
+// Problem 7
+// addition of 2 numbers using Pointers
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cin >> a;
+    cin >> b;
+    
+    int *ptr1 = &a;
+    int *ptr2 = &b;
+    
+    int sum =  *ptr1 + *ptr2;
+    cout << sum;
+}
