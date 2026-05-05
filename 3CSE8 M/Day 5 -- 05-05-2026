@@ -1,0 +1,26 @@
+// Problem -- 1
+// Pattern Printing Upper Right angle triangle and its opposite
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    // print upper right angle triangle
+    for(int i = 1; i <= 5; i++) {
+        for(int j = 1; j <= i; j++){
+            cout << "*";
+        }
+        cout <<"\n";
+    }
+    
+    // print lower triangle
+    for(int k = 5-1; k >= 1; k--) {
+        for(int l = 1; l <= k; l++){
+            cout << "*";
+        }
+        cout <<"\n";
+    }
+    
+
+    return 0;
+}
