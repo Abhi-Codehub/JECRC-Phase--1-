@@ -1,0 +1,55 @@
+// Program -- 1
+// Coffee billing system 
+
+#include <iostream>
+using namespace std;
+
+// int billing(int a){
+//     return a * 30;
+// }
+
+// int main() {
+//     cout << billing(50);
+// }
+
+
+// Program --2 
+// Store discount application // Program
+// find 10% -- amount * 0.10
+// discounted amount -- amount - 10% vala amount 
+// int discountedAmount(int a){
+//     return a - (a * 0.10);
+// }
+
+// int main() {
+//     cout << discountedAmount(5000);
+// }
+
+
+// Program --3 
+// Smart AC remote 
+// 1. Turn on -- 22°C
+// 2. Input -- 20.5 -- Temprature set -- 20.5°C
+// 3. Input. -- ECO -- Temprature set -- 24°C
+// 4. Input. -- Turbo -- Temprature set -- 18°C
+
+void setTemprature(){
+    cout << "Temprature Set to 22°C" << "\n";
+}
+
+void setTemprature(double temp){
+    cout << "Temprature Set to " << temp << " °C" << "\n";
+}
+
+void setTemprature(string mode){
+    if(mode == "ECO"){
+        cout << "Temprature Set to 24 °C" << "\n";
+    } else if (mode == "TURBO"){
+        cout << "Temprature Set to 18 °C" << "\n";
+    }
+}
+int main() {
+    setTemprature();
+    setTemprature(20.5);
+    setTemprature("ECO");
+}
