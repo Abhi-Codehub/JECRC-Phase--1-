@@ -79,30 +79,76 @@
 // Practice Problems -- 5
 // Smart AC Remote // Function overloading // Default Arguments
 
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-void setTemprature(int temp = 22){
-    cout << "Temprature set to " << temp  << "°C" << "\n";
-}
+// void setTemprature(int temp = 22){
+//     cout << "Temprature set to " << temp  << "°C" << "\n";
+// }
 
-void setTemprature(double temp){
-    cout << "Temprature set to " << temp  << "°C" << "\n";
-}
-void setTemprature(string mode) {
-    if(mode == "ECO"){
-        cout << "Temprature set to 24°C " << "\n";
-    } else if(mode == "TURBO") {
-        cout << "Temprature set to 18°C " << "\n";
-    }
-}
+// void setTemprature(double temp){
+//     cout << "Temprature set to " << temp  << "°C" << "\n";
+// }
+// void setTemprature(string mode) {
+//     if(mode == "ECO"){
+//         cout << "Temprature set to 24°C " << "\n";
+//     } else if(mode == "TURBO") {
+//         cout << "Temprature set to 18°C " << "\n";
+//     }
+// }
 
-int main() {
-    setTemprature(); // default value -- 22
-    setTemprature(20.5); // manually setting the temprature
-    setTemprature("ECO"); // set temprature to 24
-    setTemprature("TURBO"); // setTemprature to 18
-}
+// int main() {
+//     setTemprature(); // default value -- 22
+//     setTemprature(20.5); // manually setting the temprature
+//     setTemprature("ECO"); // set temprature to 24
+//     setTemprature("TURBO"); // setTemprature to 18
+// }
+
+
+// Practice Problems -- 6
+// Classese & Objects
+
+// #include <iostream>
+// using namespace std;
+
+// class Student {
+// public:
+//     string name;
+//     int age;
+    
+// void introduce(){
+//     cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
+//     }
+// };
+
+// int main() {
+//     Student s1, s2;
+//     s1.name = "Abhishek";
+//     s1.age = 24;
+//     s2.name = "Aman";
+//     s2.age = 23;
+//     s1.introduce();
+//     s2.introduce();
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
