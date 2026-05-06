@@ -90,41 +90,45 @@ using namespace std;
 // Problem -- 6
 // Classes / Objects 
 
-class Student{
+// class Student{
 
+// public:
+//     string name;
+//     int age;
+
+// void introduce(){
+//     cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
+//     }
+// };
+
+// int main() {
+//     Student s1, s2;
+//     s1.name = "Abhishek";
+//     s1.age = 24;
+//     s2.name = "Rahul";
+//     s2.age = 23;
+//     s1.introduce();
+//     s2.introduce();
+// }
+
+
+// Problem -- 7
+// Access Specifier
+// types -- 7.1 -- public
+//          7.2 -- private
+//          7.3 -- protected
+
+
+// 7.1 -- Public 
+
+class publicPark{
 public:
-    string name;
-    int age;
-
-void introduce(){
-    cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
+    void enter() {
+        cout << "Anyone can enter in the park...";
     }
 };
-
 int main() {
-    Student s1, s2;
-    s1.name = "Abhishek";
-    s1.age = 24;
-    s2.name = "Rahul";
-    s2.age = 23;
-    s1.introduce();
-    s2.introduce();
+    publicPark p;
+    p.enter();
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
