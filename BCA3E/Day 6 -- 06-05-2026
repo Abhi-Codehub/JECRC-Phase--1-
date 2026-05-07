@@ -1,52 +1,60 @@
-// Program -- 1
-// Coffee billing system 
+/*
+ *  ██████╗     ██████╗ ██████╗ ██████╗ ███████╗
+ * ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
+ * ██║         ██║      ██████╔╝██████╔╝███████╗
+ * ██║         ██║      ██╔═══╝ ██╔═══╝ ╚════██║
+ * ╚██████╗    ╚██████╗ ██║     ██║     ███████║
+ *  ╚═════╝     ╚═════╝ ╚═╝     ╚═╝     ╚══════╝
+ * ----------------------------------------------
+ * 🚀 16-DAY MASTERCLASS | DAY 06 (OOP & ADVANCED FUNCTIONS)
+ * 👨‍🏫 INSTRUCTOR: ABHISHEK AGGARWAL
+ * ----------------------------------------------
+ */
 
-#include <iostream>
-using namespace std;
+// ==============================================
+// 💎 PROBLEM 01: COFFEE BILLING SYSTEM ☕
+// 📝 Task: Calculate total cost based on quantity
+// ==============================================
 
+// #include <iostream>
+// using namespace std;
 // int billing(int a){
 //     return a * 30;
 // }
-
 // int main() {
-//     cout << billing(50);
+//     cout << "Total Bill: " << billing(50);
 // }
 
+// ==============================================
+// 💎 PROBLEM 02: STORE DISCOUNT CALCULATOR 🛍️
+// 📝 Task: Apply a flat 10% discount to an amount
+// ==============================================
 
-// Program --2 
-// Store discount application // Program
-// find 10% -- amount * 0.10
-// discounted amount -- amount - 10% vala amount 
+// #include <iostream>
+// using namespace std;
 // int discountedAmount(int a){
 //     return a - (a * 0.10);
 // }
-
 // int main() {
-//     cout << discountedAmount(5000);
+//     cout << "Final Price after 10% Discount: " << discountedAmount(5000);
 // }
 
+// ==============================================
+// 💎 PROBLEM 03: SMART AC REMOTE (OVERLOADING) ❄️
+// 📝 Task: Control AC via defaults, manual temp, or modes
+// ==============================================
 
-// Program --3 
-// Smart AC remote 
-// 1. Turn on -- 22°C
-// 2. Input -- 20.5 -- Temprature set -- 20.5°C
-// 3. Input. -- ECO -- Temprature set -- 24°C
-// 4. Input. -- Turbo -- Temprature set -- 18°C
-
+// #include <iostream>
+// using namespace std;
 // void setTemprature(){
-//     cout << "Temprature Set to 22°C" << "\n";
+//     cout << "Temperature Set to 22°C (Default)" << "\n";
 // }
-
 // void setTemprature(double temp){
-//     cout << "Temprature Set to " << temp << " °C" << "\n";
+//     cout << "Temperature Set to " << temp << " °C" << "\n";
 // }
-
 // void setTemprature(string mode){
-//     if(mode == "ECO"){
-//         cout << "Temprature Set to 24 °C" << "\n";
-//     } else if (mode == "TURBO"){
-//         cout << "Temprature Set to 18 °C" << "\n";
-//     }
+//     if(mode == "ECO") cout << "Temperature Set to 24 °C (ECO Mode)\n";
+//     else if (mode == "TURBO") cout << "Temperature Set to 18 °C (TURBO Mode)\n";
 // }
 // int main() {
 //     setTemprature();
@@ -54,81 +62,87 @@ using namespace std;
 //     setTemprature("ECO");
 // }
 
-// Problem -- 4
-// Pointers 
-// Declaration ,Initialization, Arithmetic operation through Pointer
+// ==============================================
+// 💎 PROBLEM 04: POINTER ARITHMETIC 📍
+// 📝 Task: Sum two variables using their memory addresses
+// ==============================================
 
+// #include <iostream>
+// using namespace std;
 // int main() {
-//     int a = 10;
+//     int a = 10, b = 20;
 //     int *ptr1 = &a;
-    
-//     int b = 20;
 //     int *ptr2 = &b;
-    
-//     int c = a + b;
 //     int c = *ptr1 + *ptr2;
-//     cout << c;
+//     cout << "Sum via Pointers: " << c;
 // }
 
-// Problem -- 5
-// Swapping of 2 variable's value using pointers and using functions
+// ==============================================
+// 💎 PROBLEM 05: THE SWAP FUNCTION (REF) 🔄
+// 📝 Task: Permanently swap values using pointers
+// ==============================================
 
+// #include <iostream>
+// using namespace std;
 // void swapNumber(int *ptr1 , int *ptr2){
 //     int temp = *ptr1;
 //     *ptr1 = *ptr2;
 //     *ptr2 = temp;
 // }
-
 // int main() {
 //     int a, b;
-//     cin >> a;
-//     cin >> b;
+//     cin >> a >> b;
 //     swapNumber(&a, &b);
-//     cout << a << " " << b;
+//     cout << "After Swap: " << a << " " << b;
 // }
 
-// Problem -- 6
-// Classes / Objects 
+// ==============================================
+// 💎 PROBLEM 06: CLASSES & OBJECTS 🏗️
+// 📝 Task: Define a Student blueprint and create instances
+// ==============================================
 
+// #include <iostream>
+// using namespace std;
 // class Student{
-
 // public:
 //     string name;
 //     int age;
-
-// void introduce(){
-//     cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
+//     void introduce(){
+//         cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
 //     }
 // };
-
 // int main() {
 //     Student s1, s2;
-//     s1.name = "Abhishek";
-//     s1.age = 24;
-//     s2.name = "Rahul";
-//     s2.age = 23;
+//     s1.name = "Abhishek"; s1.age = 24;
+//     s2.name = "Rahul"; s2.age = 23;
 //     s1.introduce();
 //     s2.introduce();
 // }
 
+// ==============================================
+// 💎 PROBLEM 07: ACCESS SPECIFIER (PUBLIC) 🔓
+// 📝 Task: Demonstrating the 'public' keyword for global access
+// ==============================================
 
-// Problem -- 7
-// Access Specifier
-// types -- 7.1 -- public
-//          7.2 -- private
-//          7.3 -- protected
+#include <iostream>
+using namespace std;
 
-
-// 7.1 -- Public 
-
-class publicPark{
+class publicPark {
 public:
+    // This method is accessible from any part of the program
     void enter() {
         cout << "Anyone can enter in the park...";
     }
 };
+
 int main() {
     publicPark p;
-    p.enter();
-    
+    p.enter(); // Direct access allowed
+    return 0;
 }
+
+/*
+ * ----------------------------------------------
+ * ✅ END OF DAY 06 CODEBASE
+ * ----------------------------------------------
+ */
