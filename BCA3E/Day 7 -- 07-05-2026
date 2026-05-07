@@ -1,0 +1,148 @@
+#include <iostream>
+using namespace std;
+// Program -- 1
+// call by value and call by refrence 
+// #include <iostream>
+// using namespace std;
+
+// void updatebyValue(int a){
+//     a = 500;
+// }
+
+// void updateByRefrence(int &a){
+//     a = 500;
+// }
+
+// int main(){
+//     int originial = 100;
+//     updatebyValue(originial);
+//     cout << originial << "\n";
+//     updateByRefrence(originial);
+//     cout << originial;
+// }
+
+// Program -- 2
+// Access specifier
+// private
+
+// #include <iostream>
+// using namespace std;
+
+// class BankAccount{
+// public:    
+//     int balance = 5000;
+
+// public:    
+// void showbalance(){
+//     cout << balance;
+//     }    
+// };
+// int main() {
+//     BankAccount obj1;
+//     obj1.showbalance();
+// }
+
+// Problem 3 
+// Protected access specifier
+
+// class Parent {
+// protected:    
+//     int secretCode = 1234;
+// };
+
+// class child : public Parent{
+// public:
+//     void accessLocker(){
+//         cout << secretCode;
+//     }
+// };
+// int main() {
+//     child obj1;
+//     obj1.accessLocker();
+// } 
+
+// Problem -- 4
+// Constructor 
+// 4.1 Parameterized Constructor
+
+// class Student{
+
+// public:
+//     string name;
+//     int age;
+    
+//     Student(string studentName, int studentAge){
+//         name = studentName;
+//         age = studentAge;
+//     }
+
+// void introduce(){
+//     cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
+//     }
+// };
+
+// int main() {
+//     Student s1("Abhishek", 24);
+//     s1.introduce();
+// }
+
+// 4.2 default Constructor
+// class wifiConnection {
+// public:    
+//     string networkName;
+//     int password;
+    
+//     wifiConnection() {
+//         networkName = "ACT Fibre Net";
+//         password = 1234;
+//     }
+
+// void showDetails(){
+//     cout << networkName << " " <<password;
+//     }
+// };
+
+// int main() {
+//     wifiConnection obj1;
+//     obj1.showDetails();
+// }
+
+
+// Problem -- 5
+// Constructor overloading 
+
+class Rectangle {
+public:    
+    int length;
+    int width;
+    
+    // Constructor -- 1 (default Constructor)
+    Rectangle() {
+        length = 10;
+        width = 20;
+    }
+    // Constructor -- 2 (Parameterized Constructor)
+    Rectangle(int l) {
+        length = l;
+        width = 20;
+    }
+    // Constructor -- 3 (Parameterized Constructor)
+    Rectangle(int l, int b){
+        length = l;
+        width = b;
+    }
+    
+void area() {
+    cout << length * width;
+}
+    
+};
+
+int main() {
+    Rectangle r1;
+    r1.area();
+    Rectangle r2(5);
+    r2.area();
+    Rectangle r3(5,2);
+    r3.area();
+}
