@@ -98,3 +98,44 @@ int main() {
     
 }
 
+
+// Problem -- 3
+// Pillar of OOPS
+// Encapsulation 
+// Encapsulation Means we are binding the data into a single unit (Functions, data, variables, methods)
+// into a single unit called class and making some restrictions on this class members
+// Data security 
+// controlled access over my Data
+// validation before accessing the Data
+// code maintainability
+
+// class bankAccount{
+// private:
+// int balance;    
+
+// public:   
+// void setBalance(int amount) {
+//     if(amount >= 0) {
+//         balance = amount;
+//     } else {
+//         cout <<"Enter a valid Number...";
+//     }
+// }
+// public:
+// int getbalance() {
+//     return balance;
+//     }
+// };
+// int main() {
+//     bankAccount obj1;
+//     obj1.setBalance(6000);
+//     cout << obj1.getbalance();
+// }
+
+// Problem -- 4
+// Abstraction 
+// Abstraction means hiding the implementation and showing only the neccessary / essential
+// features to the users
+// abstract class -- class cannot be initialized and it is formed using the abstract keyword
+// absract method -- there is no initialization of the abstract method
+
