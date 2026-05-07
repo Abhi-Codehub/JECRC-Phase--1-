@@ -1,148 +1,142 @@
-#include <iostream>
-using namespace std;
-// Program -- 1
-// call by value and call by refrence 
+/*
+ *  ██████╗     ██████╗ ██████╗ ██████╗ ███████╗
+ * ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
+ * ██║         ██║      ██████╔╝██████╔╝███████╗
+ * ██║         ██║      ██╔═══╝ ██╔═══╝ ╚════██║
+ * ╚██████╗    ╚██████╗ ██║     ██║     ███████║
+ *  ╚═════╝     ╚═════╝ ╚═╝     ╚═╝     ╚══════╝
+ * ----------------------------------------------
+ * 🚀 16-DAY MASTERCLASS | DAY 07 (OOP & CONSTRUCTORS)
+ * 👨‍🏫 INSTRUCTOR: ABHISHEK AGGARWAL
+ * ----------------------------------------------
+ */
+
+// ==============================================
+// 💎 PROBLEM 01: CALL BY VALUE VS REFERENCE 🔄
+// 📝 Task: Understand "Photocopy" vs "Direct Access"
+// ==============================================
+
 // #include <iostream>
 // using namespace std;
-
-// void updatebyValue(int a){
-//     a = 500;
-// }
-
-// void updateByRefrence(int &a){
-//     a = 500;
-// }
-
+// void updatebyValue(int a){ a = 500; }
+// void updateByRefrence(int &a){ a = 500; }
 // int main(){
 //     int originial = 100;
-//     updatebyValue(originial);
+//     updatebyValue(originial);   // Original remains 100
 //     cout << originial << "\n";
-//     updateByRefrence(originial);
+//     updateByRefrence(originial); // Original becomes 500
 //     cout << originial;
 // }
 
-// Program -- 2
-// Access specifier
-// private
+// ==============================================
+// 💎 PROBLEM 02: ACCESS SPECIFIER (PRIVATE) 🛡️
+// 📝 Task: Encapsulate data within a BankAccount class
+// ==============================================
 
 // #include <iostream>
 // using namespace std;
-
 // class BankAccount{
-// public:    
+// private:    
 //     int balance = 5000;
-
 // public:    
-// void showbalance(){
-//     cout << balance;
-//     }    
+//     void showbalance(){ cout << balance; }    
 // };
-// int main() {
-//     BankAccount obj1;
-//     obj1.showbalance();
-// }
 
-// Problem 3 
-// Protected access specifier
+// ==============================================
+// 💎 PROBLEM 03: PROTECTED ACCESS 🔐
+// 📝 Task: Use inheritance to access 'protected' members
+// ==============================================
 
 // class Parent {
 // protected:    
-//     int secretCode = 1234;
+//     int secretCode = 1234; // Visible only to Parent and Child
 // };
-
 // class child : public Parent{
 // public:
-//     void accessLocker(){
-//         cout << secretCode;
-//     }
+//     void accessLocker(){ cout << "Secret Code: " << secretCode; }
 // };
-// int main() {
-//     child obj1;
-//     obj1.accessLocker();
-// } 
 
-// Problem -- 4
-// Constructor 
+// ==============================================
+// 💎 PROBLEM 04: CONSTRUCTORS 🏗️
+// 📝 Task: Automatic initialization of objects
+// ==============================================
+
 // 4.1 Parameterized Constructor
-
 // class Student{
-
 // public:
 //     string name;
 //     int age;
-    
 //     Student(string studentName, int studentAge){
-//         name = studentName;
-//         age = studentAge;
+//         name = studentName; age = studentAge;
 //     }
-
-// void introduce(){
-//     cout << "Hi there, this person name is " << name << " and his age is " << age << "\n";
-//     }
+//     void introduce(){ cout << name << " is " << age << " years old.\n"; }
 // };
 
-// int main() {
-//     Student s1("Abhishek", 24);
-//     s1.introduce();
-// }
-
-// 4.2 default Constructor
+// 4.2 Default Constructor
 // class wifiConnection {
 // public:    
 //     string networkName;
 //     int password;
-    
-//     wifiConnection() {
-//         networkName = "ACT Fibre Net";
-//         password = 1234;
-//     }
-
-// void showDetails(){
-//     cout << networkName << " " <<password;
-//     }
+//     wifiConnection() { networkName = "ACT Fibre Net"; password = 1234; }
+//     void showDetails(){ cout << networkName << " " << password; }
 // };
 
-// int main() {
-//     wifiConnection obj1;
-//     obj1.showDetails();
-// }
+// ==============================================
+// 💎 PROBLEM 05: CONSTRUCTOR OVERLOADING 📐
+// 📝 Task: Provide multiple ways to initialize a Rectangle
+// ==============================================
 
 
-// Problem -- 5
-// Constructor overloading 
+
+#include <iostream>
+using namespace std;
 
 class Rectangle {
 public:    
     int length;
     int width;
     
-    // Constructor -- 1 (default Constructor)
+    // Constructor -- 1 (Default: No arguments)
     Rectangle() {
         length = 10;
         width = 20;
     }
-    // Constructor -- 2 (Parameterized Constructor)
+
+    // Constructor -- 2 (Single argument: Square or Fixed width)
     Rectangle(int l) {
         length = l;
         width = 20;
     }
-    // Constructor -- 3 (Parameterized Constructor)
+
+    // Constructor -- 3 (Parameterized: Custom dimensions)
     Rectangle(int l, int b){
         length = l;
         width = b;
     }
     
-void area() {
-    cout << length * width;
-}
-    
+    void area() {
+        cout << "Area: " << length * width << "\n";
+    }
 };
 
 int main() {
-    Rectangle r1;
+    cout << "--- Rectangle 1 (Default) ---\n";
+    Rectangle r1; 
     r1.area();
-    Rectangle r2(5);
+
+    cout << "\n--- Rectangle 2 (L=5, W=Default) ---\n";
+    Rectangle r2(5); 
     r2.area();
-    Rectangle r3(5,2);
+
+    cout << "\n--- Rectangle 3 (L=5, W=2) ---\n";
+    Rectangle r3(5, 2); 
     r3.area();
+
+    return 0;
 }
+
+/*
+ * ----------------------------------------------
+ * ✅ END OF DAY 07 CODEBASE
+ * ----------------------------------------------
+ */
