@@ -1,141 +1,136 @@
+/*
+ *  ██████╗     ██████╗ ██████╗ ██████╗ ███████╗
+ * ██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝
+ * ██║         ██║      ██████╔╝██████╔╝███████╗
+ * ██║         ██║      ██╔═══╝ ██╔═══╝ ╚════██║
+ * ╚██████╗    ╚██████╗ ██║     ██║     ███████║
+ *  ╚═════╝     ╚═════╝ ╚═╝     ╚═╝     ╚══════╝
+ * ----------------------------------------------
+ * 🚀 16-DAY MASTERCLASS | DAY 07 (OOP PILLARS & CONSTRUCTORS)
+ * 👨‍🏫 INSTRUCTOR: ABHISHEK AGGARWAL
+ * ----------------------------------------------
+ */
+
+// ==============================================
+// 💎 PROBLEM 01: ACCESS SPECIFIERS 🛡️
+// 📝 Task: Master Private and Protected levels
+// ==============================================
+
+// 7.2 -- Private: Data hidden from direct outside access
+// #include <iostream>
+// using namespace std;
+// class BandAccount {
+// private:
+//     int balance = 5000;
+// public:
+//     void showBalance() { cout << "Balance: " << balance; }
+// };
+
+// 7.3 -- Protected: Accessible only by child/derived classes
 #include <iostream>
 using namespace std;
 
-// Problem -- 1
-// Access Specifier
-// 7. 2-- Public 
-
-// class BandAccount {
-    
-// private:
-//     int balance = 5000;
-    
-// public:
-// void showBalance() {
-//     cout << "Balance in your account is: " << balance;
-//     }
-// };
-
-// int main() {
-//     BandAccount myaccount;
-//     myaccount.showBalance();
-// }
-
-// Access Specifier
-// 7. 3-- protected
-
 class Parent {
 protected:
-    int secretCode = 1234;    
-    
+    int secretCode = 1234; // Shielded from main, visible to Child
 };
-class child : public Parent{
+
+class child : public Parent {
 public:    
     void accessOfSecretCode() {
-        cout << "secretCode of the locker is " << secretCode;
+        cout << "Secret code accessed via Inheritance: " << secretCode << "\n";
     }
 };
 
-int main() {
-    child obj1;
-    obj1.accessOfSecretCode();
-}
+// ==============================================
+// 💎 PROBLEM 02: CONSTRUCTORS 🏗️
+// 📝 Task: Initializing objects automatically
+// ==============================================
 
-
-// Problem -- 2
-// Constructors 
-// Types -- 2.1 -- default
-//          2.2 -- Parameterized
-//          2.3 -- Copy
-
-// 2.1 -- Default Constructor
-
+// 2.1 -- Default Constructor: No parameters required
 class wifiConnection {
 public:    
     string networkName;
     string password;
     
-    // Constructor
     wifiConnection() {
         networkName = "ACTFibre";
         password = "BJP wons";
     }
     
-public:
-void showDetails() {
-   cout << "NetWork name is " << networkName << " and its password is " << password; 
+    void showDetails() {
+        cout << "WiFi: " << networkName << " | PWD: " << password << "\n"; 
     }
 };
 
-int main() {
-    wifiConnection obj1;
-    obj1.showDetails();
-}
-
-2.2 -- Parameterized Constructor
-
+// 2.2 -- Parameterized Constructor: Pass data at creation
 class Student {
-
 public:
     string name;
     int id;
-    
-// Constructor
 
     Student(string studentName, int studentID){
         name = studentName;
         id = studentID;
     }
 
-public:
-void displayDetails() {
-    cout << name << " " <<id;
-}    
+    void displayDetails() { cout << "Student: " << name << " (ID: " << id << ")\n"; }    
 };
-int main() {
-    Student std1("Abhishek", 101);
-    std1.displayDetails();
+
+// ==============================================
+// 💎 PROBLEM 03: ENCAPSULATION 💊
+// 📝 Task: Data hiding and Controlled Access (Getters/Setters)
+// 🖼️ Concept: Binding variables & methods into one unit
+// ==============================================
+
+class bankAccount {
+private:
+    int balance;    
+
+public:   
+    void setBalance(int amount) {
+        if(amount >= 0) {
+            balance = amount;
+        } else {
+            cout << "Error: Invalid Amount!\n";
+        }
+    }
     
+    int getbalance() { return balance; }
+};
+
+// ==============================================
+// 💎 PROBLEM 04: ABSTRACTION 🌫️
+// 📝 Task: Hiding implementation, showing only essentials
+// ==============================================
+
+/* 
+ * Abstract Class: A blueprint that cannot be instantiated.
+ * Abstract Method: A method declared without an implementation (Pure Virtual).
+ */
+
+int main() {
+    cout << "--- Access Specifier Demo ---\n";
+    child obj1;
+    obj1.accessOfSecretCode();
+
+    cout << "\n--- Constructor Demo ---\n";
+    wifiConnection wifi;
+    wifi.showDetails();
+    
+    Student std1("Abhishek", 101); // Abhishek Aggarwal, Age 24
+    std1.displayDetails();
+
+    cout << "\n--- Encapsulation Demo ---\n";
+    bankAccount myAcc;
+    myAcc.setBalance(6000);
+    cout << "Verified Balance: " << myAcc.getbalance() << "\n";
+
+    return 0;
 }
 
-
-// Problem -- 3
-// Pillar of OOPS
-// Encapsulation 
-// Encapsulation Means we are binding the data into a single unit (Functions, data, variables, methods)
-// into a single unit called class and making some restrictions on this class members
-// Data security 
-// controlled access over my Data
-// validation before accessing the Data
-// code maintainability
-
-// class bankAccount{
-// private:
-// int balance;    
-
-// public:   
-// void setBalance(int amount) {
-//     if(amount >= 0) {
-//         balance = amount;
-//     } else {
-//         cout <<"Enter a valid Number...";
-//     }
-// }
-// public:
-// int getbalance() {
-//     return balance;
-//     }
-// };
-// int main() {
-//     bankAccount obj1;
-//     obj1.setBalance(6000);
-//     cout << obj1.getbalance();
-// }
-
-// Problem -- 4
-// Abstraction 
-// Abstraction means hiding the implementation and showing only the neccessary / essential
-// features to the users
-// abstract class -- class cannot be initialized and it is formed using the abstract keyword
-// absract method -- there is no initialization of the abstract method
-
+/*
+ * ----------------------------------------------
+ * ✅ END OF DAY 07 CODEBASE
+ * ----------------------------------------------
+ */
