@@ -2,57 +2,57 @@
 using namespace std;
 
 // Problem -- 1
-// Inheritance 
+// Inheritance 
 // Types -- 1.1 Single Inheritance
 
 // class Vehicle {
 // public:
-//     void start() {
-//         cout << "Vehicle Starts" << "\n";
-//     }
+//     void start() {
+//         cout << "Vehicle Starts" << "\n";
+//     }
 // };
 
 // class Car : public Vehicle {
 // public:
-//     void drive() {
-//         cout << "Car is running" << "\n";
-//     }
+//     void drive() {
+//         cout << "Car is running" << "\n";
+//     }
 // };
 
 // int main() {
-//     Car obj1;
-//     obj1.drive();
-//     obj1.start();
+//     Car obj1;
+//     obj1.drive();
+//     obj1.start();
 // }
 
 // Types -- 1.2 MultiLevel Inheritance
 
 // class Vehicle {
 // public:
-//     void start() {
-//         cout << "Vehicle Starts" << "\n";
-//     }
+//     void start() {
+//         cout << "Vehicle Starts" << "\n";
+//     }
 // };
 
 // class Car : public Vehicle {
 // public:
-//     void drive() {
-//         cout << "Car is running" << "\n";
-//     }
+//     void drive() {
+//         cout << "Car is running" << "\n";
+//     }
 // };
 
 // class speedoMeter : public Car {
 // public:
-//     void speed(){
-//         cout << "Car is running at 60km/h" <<"\n";
-//     }
+//     void speed(){
+//         cout << "Car is running at 60km/h" <<"\n";
+//     }
 // };
 
 // int main() {
-//     speedoMeter obj1;
-//     obj1.speed();
-//     obj1.drive();
-//     obj1.start();
+//     speedoMeter obj1;
+//     obj1.speed();
+//     obj1.drive();
+//     obj1.start();
 // }
 
 
@@ -60,32 +60,32 @@ using namespace std;
 
 // class Vehicle {
 // public:
-//     void start() {
-//         cout << "Vehicle starts" <<"\n";
-//     }
+//     void start() {
+//         cout << "Vehicle starts" <<"\n";
+//     }
 // };
 // class Bike : public Vehicle {
 // public:
-//     void drive(){
-//         cout << "Bike is running" << "\n";
-//     }
+//     void drive(){
+//         cout << "Bike is running" << "\n";
+//     }
 // };
 
 // class Car : public Vehicle {
 // public:
-//     void chalna() {
-//         cout << "Car is challing" << "\n";
-//     }
+//     void chalna() {
+//         cout << "Car is challing" << "\n";
+//     }
 // };
 // int main() {
-//     Car obj1;
-//     Bike obj2;
-    
-//     obj1.chalna();
-//     obj1.start();
-    
-//     obj2.start();
-//     obj2.drive();
+//     Car obj1;
+//     Bike obj2;
+    
+//     obj1.chalna();
+//     obj1.start();
+    
+//     obj2.start();
+//     obj2.drive();
 // }
 
 
@@ -93,124 +93,124 @@ using namespace std;
 
 // class Parent1 {
 // public:
-//     void giveMeMoney(){
-//         cout << "Mummy paisa do mujhe" << "\n";
-//     }
+//     void giveMeMoney(){
+//         cout << "Mummy paisa do mujhe" << "\n";
+//     }
 // };
 
 // class Parent2 {
 // public:
-//     void giveMeMoney(){
-//         cout << "Papa paisa do mujhe"  << "\n";
-//     }   
+//     void giveMeMoney(){
+//         cout << "Papa paisa do mujhe"  << "\n";
+//     }   
 // };
 
 // class child : public Parent1, public Parent2 {
-//     // NO LOGIC
+//     // NO LOGIC
 // };
 
 // int main() {
-//     child obj1;
-//     //obj1.giveMeMoney();
-//     //obj1.Parent1::giveMeMoney();
-//     //obj1.Parent2::giveMeMoney();
+//     child obj1;
+//     //obj1.giveMeMoney();
+//     //obj1.Parent1::giveMeMoney();
+//     //obj1.Parent2::giveMeMoney();
 // }
 
 // Types -- 1.5 Hybrid Inheritance
 
 // class A {
-// public: 
-//     void print(){
-//         cout << "BJP Wons";
-//     }
+// public: 
+//     void print(){
+//         cout << "BJP Wons";
+//     }
 // };
 // class B : virtual public A {
-//     // NO LOGIC
+//     // NO LOGIC
 // };
 
 // class C : virtual public A {
-//     // NO LOGIC
+//     // NO LOGIC
 // };
 
 // class D : public B, public C {
-//     // NO LOGIC
+//     // NO LOGIC
 // };
 
 // int main() {
-//     D obj1;
-//     obj1.print();
+//     D obj1;
+//     obj1.print();
 // }
 
 // Problem -- 2
-// Polymorphism 
-// Polymorphism means one name but many forms 
-// same function behaves differntly depending on the type of the object it called 
+// Polymorphism 
+// Polymorphism means one name but many forms 
+// same function behaves differntly depending on the type of the object it called 
 // two Types
 // Compile time Polymorphism -- Function Overloading -- Static
-// Resolved at compile time 
+// Resolved at compile time 
 // Function overloads -- same function name, but different parameters
-// faster excution 
-// Run time Polymorphism -- Function overrding -- Dynamic 
-// Resolved at run time 
+// faster excution 
+// Run time Polymorphism -- Function overrding -- Dynamic 
+// Resolved at run time 
 // Function runtine -- same function name, same parameters , but different class
 // uses a virtual keyword in the base class
 // acheiving this through the concept of Inheritance
 
-// Types of Polymorphism -- 2.1 
+// Types of Polymorphism -- 2.1 
 // Function overloading
 
 // class Math {
 // public:
-//     void add(int a, int b){
-//         cout << a + b << "\n";
-//     }
-    
+//     void add(int a, int b){
+//         cout << a + b << "\n";
+//     }
+    
 // public:
-//     void add(int a, int b, int c) {
-//         cout << a + b + c << "\n";
-//     }
-// public: 
-//     void add(double a, double b){
-//         cout << a + b << "\n";
-//     }
+//     void add(int a, int b, int c) {
+//         cout << a + b + c << "\n";
+//     }
+// public: 
+//     void add(double a, double b){
+//         cout << a + b << "\n";
+//     }
 // };
 
 // int main() {
-//     Math m;
-//     m.add(5,2);
-//     m.add(5,5,5);
-//     m.add(5.2, 2.2);
+//     Math m;
+//     m.add(5,2);
+//     m.add(5,5,5);
+//     m.add(5.2, 2.2);
 // }
 
-// Types of Polymorphism -- 2.1 
+// Types of Polymorphism -- 2.1 
 // Function overrding
 
 class Animal{
 public:
-     void sound() {
-        cout << "Animal makes sound";
-    }
+     void sound() {
+        cout << "Animal makes sound";
+    }
 };
 
 class Dog : public Animal {
 public:
-    void sound()  {
-        cout << "Dog makes a sound" <<"\n";
-    }
+    void sound()  {
+        cout << "Dog makes a sound" <<"\n";
+    }
 };
 
 class Cat : public Animal {
 public:
-    void sound()  {
-        cout << "Cat makes a sound" <<"\n";
-    }
+    void sound()  {
+        cout << "Cat makes a sound" <<"\n";
+    }
 };
- 
+ 
 int main() {
-    //Dog d;
-   Cat c;
-    //d.sound();
-    c.sound();
+    //Dog d;
+   Cat c;
+    //d.sound();
+    c.sound();
 }
 
 
@@ -218,18 +218,18 @@ int main() {
 
 // class Parent{
 // public:
-//      void sum(int a, int b){
-//         cout << a + b << "parent";
-//     }
+//      void sum(int a, int b){
+//         cout << a + b << "parent";
+//     }
 // };
 
 // class child : public Parent{
 // public:
-//     void sum(int a, int b) {
-//         cout << a + b << "child";
-//     }  
+//     void sum(int a, int b) {
+//         cout << a + b << "child";
+//     }  
 // };
 // int main() {
-//     child c;
-//     c.sum(10, 20);
+//     child c;
+//     c.sum(10, 20);
 // }
