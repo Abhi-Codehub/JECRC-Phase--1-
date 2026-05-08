@@ -27,71 +27,119 @@ using namespace std;
 
 // Types -- 1.2 MultiLevel Inheritance
 
-class Vehicle {
-public:
-    void start() {
-        cout << "Vehicle Starts" << "\n";
-    }
-};
+// class Vehicle {
+// public:
+//     void start() {
+//         cout << "Vehicle Starts" << "\n";
+//     }
+// };
 
-class Car : public Vehicle {
-public:
-    void drive() {
-        cout << "Car is running" << "\n";
-    }
-};
+// class Car : public Vehicle {
+// public:
+//     void drive() {
+//         cout << "Car is running" << "\n";
+//     }
+// };
 
-class speedoMeter : public Car {
-public:
-    void speed(){
-        cout << "Car is running at 60km/h" <<"\n";
-    }
-};
+// class speedoMeter : public Car {
+// public:
+//     void speed(){
+//         cout << "Car is running at 60km/h" <<"\n";
+//     }
+// };
 
-int main() {
-    speedoMeter obj1;
-    obj1.speed();
-    obj1.drive();
-    obj1.start();
-}
+// int main() {
+//     speedoMeter obj1;
+//     obj1.speed();
+//     obj1.drive();
+//     obj1.start();
+// }
+
 
 // Types -- 1.3 Hierarchical Inheritance
 
-class Vehicle {
-public:
-    void start() {
-        cout << "Vehicle starts" <<"\n";
+// class Vehicle {
+// public:
+//     void start() {
+//         cout << "Vehicle starts" <<"\n";
+//     }
+// };
+// class Bike : public Vehicle {
+// public:
+//     void drive(){
+//         cout << "Bike is running" << "\n";
+//     }
+// };
+
+// class Car : public Vehicle {
+// public:
+//     void chalna() {
+//         cout << "Car is challing" << "\n";
+//     }
+// };
+// int main() {
+//     Car obj1;
+//     Bike obj2;
+    
+//     obj1.chalna();
+//     obj1.start();
+    
+//     obj2.start();
+//     obj2.drive();
+// }
+
+
+// // Types -- 1.4 Multiple Inheritance
+
+// class Parent1 {
+// public:
+//     void giveMeMoney(){
+//         cout << "Mummy paisa do mujhe" << "\n";
+//     }
+// };
+
+// class Parent2 {
+// public:
+//     void giveMeMoney(){
+//         cout << "Papa paisa do mujhe"  << "\n";
+//     }   
+// };
+
+// class child : public Parent1, public Parent2 {
+//     // NO LOGIC
+// };
+
+// int main() {
+//     child obj1;
+//     //obj1.giveMeMoney();
+//     //obj1.Parent1::giveMeMoney();
+//     //obj1.Parent2::giveMeMoney();
+// }
+
+// Types -- 1.5 Hybrid Inheritance
+
+class A {
+public: 
+    void print(){
+        cout << "BJP Wons";
     }
 };
-class Bike : public Vehicle {
-public:
-    void drive(){
-        cout << "Bike is running" << "\n";
-    }
+class B : virtual public A {
+    // NO LOGIC
 };
 
-class Car : public Vehicle {
-public:
-    void chalna() {
-        cout << "Car is challing" << "\n";
-    }
+class C : virtual public A {
+    // NO LOGIC
 };
+
+class D : public B, public C {
+    // NO LOGIC
+};
+
 int main() {
-    Car obj1;
-    Bike obj2;
-    
-    obj1.chalna();
-    obj1.start();
-    
-    obj2.start();
-    obj2.drive();
+    D obj1;
+    obj1.print();
 }
-
-
-
-
-
-
 
 
 
