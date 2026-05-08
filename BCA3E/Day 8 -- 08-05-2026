@@ -28,33 +28,33 @@ using namespace std;
 
 // 1.2 -- Multilevel Inheritance
 
-class Vehicle {
-public:    
-    void start() {
-        cout <<"Vehicle starts" <<"\n";
-    }
-};
+// class Vehicle {
+// public:    
+//     void start() {
+//         cout <<"Vehicle starts" <<"\n";
+//     }
+// };
 
-class Car : public Vehicle {
-public:
-    void drive() {
-        cout << "Car is running" << "\n";
-    }
-};
+// class Car : public Vehicle {
+// public:
+//     void drive() {
+//         cout << "Car is running" << "\n";
+//     }
+// };
 
-class speedOMeter : public Car {
-public:
-    void speed() {
-        cout << "Car is running at 60km/h" <<"\n";
-    }
-};
+// class speedOMeter : public Car {
+// public:
+//     void speed() {
+//         cout << "Car is running at 60km/h" <<"\n";
+//     }
+// };
 
-int main() {
-    speedOMeter obj1;
-    obj1.start();
-    obj1.drive();
-    obj1.speed();
-}
+// int main() {
+//     speedOMeter obj1;
+//     obj1.start();
+//     obj1.drive();
+//     obj1.speed();
+// }
 
 // 1.3 -- hierarchical Inheritance
 
@@ -87,6 +87,80 @@ int main() {
 //     b.drive();
 // }
 
+// 1.4 -- multiple Inheritance -- ERROR Vala program
+
+// class Parent1{
+// public:
+//     void paiseDo() {
+//         cout <<"Mummy paise de do goomne jana hai..." <<"\n";
+//     }
+// };
+
+// class Parent2 {
+// public:
+//     void paiseDo(){
+//         cout <<"Papa paise de do books laani hai...";
+//     }
+// };
+
+// class child : public Parent1, public Parent2{
+//     // NO LOGIC 
+// };
+
+// int main() {
+//     child c;
+//     c.paiseDo();
+//     //c.paiseDoPapa();
+// }
 
 
+// 1.5 -- Hybrid Inheritance -- Diamond problem solution -- virtual base class
+// class A {
+// public:
+//     void print() {
+//         cout <<"Hi there...";
+//     }
+// };
 
+// class B : virtual public A {
+//   //NO LOGIC 
+// };
+
+// class C : virtual public A {
+//     // NO LOGIC  
+// };
+
+// class D : public B , public C {
+//  // NO LOGIC    
+// };
+// int main(){
+//     D obj1;
+//     obj1.print();
+    
+// }
+
+// Problem --2 
+// Encapsulation 
+
+class BankAccount {
+private:    
+    int bankBalance;
+public:    
+    void setBalance(int amount) {
+        if(amount >= 0){
+            bankBalance = amount;
+        } else {
+            cout << "enter a valid amount";
+        }
+    }
+    
+    int getbalance() {
+        return bankBalance;
+    }
+};
+
+int main() {
+   BankAccount obj1;
+   obj1.setBalance(5000);
+   cout << obj1.getbalance();
+}
