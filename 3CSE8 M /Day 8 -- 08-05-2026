@@ -118,43 +118,118 @@ using namespace std;
 
 // Types -- 1.5 Hybrid Inheritance
 
-class A {
-public: 
-    void print(){
-        cout << "BJP Wons";
+// class A {
+// public: 
+//     void print(){
+//         cout << "BJP Wons";
+//     }
+// };
+// class B : virtual public A {
+//     // NO LOGIC
+// };
+
+// class C : virtual public A {
+//     // NO LOGIC
+// };
+
+// class D : public B, public C {
+//     // NO LOGIC
+// };
+
+// int main() {
+//     D obj1;
+//     obj1.print();
+// }
+
+// Problem -- 2
+// Polymorphism 
+// Polymorphism means one name but many forms 
+// same function behaves differntly depending on the type of the object it called 
+// two Types
+// Compile time Polymorphism -- Function Overloading -- Static
+// Resolved at compile time 
+// Function overloads -- same function name, but different parameters
+// faster excution 
+// Run time Polymorphism -- Function overrding -- Dynamic 
+// Resolved at run time 
+// Function runtine -- same function name, same parameters , but different class
+// uses a virtual keyword in the base class
+// acheiving this through the concept of Inheritance
+
+// Types of Polymorphism -- 2.1 
+// Function overloading
+
+// class Math {
+// public:
+//     void add(int a, int b){
+//         cout << a + b << "\n";
+//     }
+    
+// public:
+//     void add(int a, int b, int c) {
+//         cout << a + b + c << "\n";
+//     }
+// public: 
+//     void add(double a, double b){
+//         cout << a + b << "\n";
+//     }
+// };
+
+// int main() {
+//     Math m;
+//     m.add(5,2);
+//     m.add(5,5,5);
+//     m.add(5.2, 2.2);
+// }
+
+// Types of Polymorphism -- 2.1 
+// Function overrding
+
+class Animal{
+public:
+     void sound() {
+        cout << "Animal makes sound";
     }
 };
-class B : virtual public A {
-    // NO LOGIC
+
+class Dog : public Animal {
+public:
+    void sound()  {
+        cout << "Dog makes a sound" <<"\n";
+    }
 };
 
-class C : virtual public A {
-    // NO LOGIC
+class Cat : public Animal {
+public:
+    void sound()  {
+        cout << "Cat makes a sound" <<"\n";
+    }
 };
-
-class D : public B, public C {
-    // NO LOGIC
-};
-
+ 
 int main() {
-    D obj1;
-    obj1.print();
+    //Dog d;
+   Cat c;
+    //d.sound();
+    c.sound();
 }
 
 
+// Function overrding
 
+// class Parent{
+// public:
+//      void sum(int a, int b){
+//         cout << a + b << "parent";
+//     }
+// };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// class child : public Parent{
+// public:
+//     void sum(int a, int b) {
+//         cout << a + b << "child";
+//     }  
+// };
+// int main() {
+//     child c;
+//     c.sum(10, 20);
+// }
