@@ -1,84 +1,84 @@
 #include <iostream>
 using namespace std;
-// Problem -- 1
-// Function Overriding 
+Problem -- 1
+Function Overriding 
 
-// class Appliance{
-// public:    
-//     virtual void turnOn(){
-//         cout <<"Appliance is starting up..." <<"\n";
-//     }
-//     virtual void work() = 0;
-// };
+class Appliance{
+public:    
+    virtual void turnOn(){
+        cout <<"Appliance is starting up..." <<"\n";
+    }
+    virtual void work() = 0;
+};
 
-// class Fan : public Appliance{
-// public:
-//     void turnOn() override{
-//         cout <<"Fan blades are moving slowly..." <<"\n";
-//     }
-//     void work() override {
-//         cout <<"Fan is giving me cool air..." <<"\n";
-//     }
-// };
+class Fan : public Appliance{
+public:
+    void turnOn() override{
+        cout <<"Fan blades are moving slowly..." <<"\n";
+    }
+    void work() override {
+        cout <<"Fan is giving me cool air..." <<"\n";
+    }
+};
 
-// class Toaster : public Appliance{
-//     void work() override {
-//         cout << "Toaster is heating up the breads..." <<"\n";
-//     }
-// };
+class Toaster : public Appliance{
+    void work() override {
+        cout << "Toaster is heating up the breads..." <<"\n";
+    }
+};
 
-// int main() {
-//     Appliance* kitchenApp;
-//     Fan myfan;
-//     kitchenApp = &myfan;
-//     kitchenApp->turnOn();
-//     kitchenApp->work();
+int main() {
+    Appliance* kitchenApp;
+    Fan myfan;
+    kitchenApp = &myfan;
+    kitchenApp->turnOn();
+    kitchenApp->work();
     
-//     Toaster myToast;
-//     kitchenApp = &myToast;
-//     kitchenApp->turnOn();
-//     kitchenApp->work();
-// }
+    Toaster myToast;
+    kitchenApp = &myToast;
+    kitchenApp->turnOn();
+    kitchenApp->work();
+}
 
-// Problem -- 2
-// Constructor Overloading 
+Problem -- 2
+Constructor Overloading 
 
-// class Reactangle {
-// public:
-//     int length;
-//     int width;
+class Reactangle {
+public:
+    int length;
+    int width;
     
-//     Reactangle() {
-//         length = 1;
-//         width = 1;
-//     }
-//     Reactangle(int side) {
-//         length = side;
-//         width = side;
-//     }
-//     Reactangle(int side1, int side2){
-//         length = side1;
-//         width = side2;
-//     }
+    Reactangle() {
+        length = 1;
+        width = 1;
+    }
+    Reactangle(int side) {
+        length = side;
+        width = side;
+    }
+    Reactangle(int side1, int side2){
+        length = side1;
+        width = side2;
+    }
     
-//     void showArea() {
-//         cout << length * width <<"\n";
-//     }
-// };
+    void showArea() {
+        cout << length * width <<"\n";
+    }
+};
 
-// int main() {
-//     Reactangle r1;
-//     Reactangle r2(5);
-//     Reactangle r3(5,4);
+int main() {
+    Reactangle r1;
+    Reactangle r2(5);
+    Reactangle r3(5,4);
     
-//     r1.showArea();
-//     r2.showArea();
-//     r3.showArea();
-// }
+    r1.showArea();
+    r2.showArea();
+    r3.showArea();
+}
 
 
-// Problem -- 3
-// Introduction to Arrays + Traversal + Memory Layout 
+Problem -- 3
+Introduction to Arrays + Traversal + Memory Layout 
 
 void traversal(int arr[], int size){
      for(int i = 0; i < size; i++) {
@@ -101,8 +101,6 @@ int main() {
     int arr[] = {10,20,30,40,50};
     Addresstraversal(arr, 5);
 }
-
-
 
 
 
