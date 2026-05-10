@@ -1,0 +1,97 @@
+#include <iostream>
+using namespace std;
+// Problem -- 1
+// Making of 2D array 
+
+// int main() {
+//     int arr[2][2];
+    
+//     for(int i = 0; i < 2; i++) {
+//         for(int j = 0; j < 2; j++) {
+//             cin >> arr[i][j];
+//         }
+//     }
+    
+//     cout <<"here is your 2 Day array" << "\n";
+//     for(int i = 0; i < 2; i++) {
+//         for(int j = 0; j < 2; j++) {
+//             cout << arr[i][j] << " ";
+//         }
+//         cout << "\n";
+//     }
+//     return 0;
+// }
+
+// Problem -- 2
+// sum of elements of 2D array 
+
+// int main() {
+//     int arr[2][2];
+//     int sum = 0;
+    
+//     for(int i = 0; i < 2; i++) {
+//         for(int j = 0; j < 2; j++) {
+//             cin >> arr[i][j];
+//             sum = sum + arr[i][j];
+//         }
+//     }
+//     cout << sum;
+// }
+
+// Problem -- 3
+// Search an element in a 2D matrix 
+
+int main() {
+    int arr[2][2] = { {10,20},
+                    {30,40} };
+                    
+    int searchElement;
+    cin >> searchElement;
+    
+       for(int i = 0; i < 2; i++) {
+        for(int j = 0; j < 2; j++) {
+            if(arr[i][j] == searchElement){
+                cout << i << " " << j;
+                return 0;
+                }
+            }
+       }
+    cout << "element not found..";
+    
+}
+
+LeetCode -- 1
+Two Sum 
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for(int i = 0; i < nums.size(); i++) {
+            for(int j = i + 1; j < nums.size(); j++) {
+                if(nums[i] + nums[j] == target) {
+                    return {i,j};
+                }
+            }
+        }
+        return {};
+    }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
