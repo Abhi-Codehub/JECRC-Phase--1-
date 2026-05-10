@@ -1,0 +1,63 @@
+LeetCode 1
+Two Sum 
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        for(int i = 0; i < nums.size(); i++) {
+            for(int j = i + 1; j < nums.size(); j++) {
+                if(nums[i] + nums[j] == target) {
+                    return {i,j};
+                }
+            }
+        }
+        return {};
+    }
+};
+
+LeetCode 169
+Majority Element 
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int n = nums.size();
+        for(int i = 0; i < n; i++) {
+            int count = 0;
+            for(int j = 0; j < n; j++){
+                if(nums[i] == nums[j]) {
+                    count++;
+                }
+            }
+            if(count > n/2) {
+                return nums[i];
+            }
+        }
+        return -1;
+// Approach 2
+        sort(nums.begin(), nums.end());
+        return nums[n/2];
+
+
+LeetCode 121
+Best time to Buy and sell Stocks 
+class Solution {
+public:
+    int maxProfit(vector<int>& prices) {
+        int minPrice = INT_MAX;
+        int maxProfit = 0;
+
+        for(int i = 0; i < prices.size(); i++){
+            minPrice = min(minPrice,prices[i]);
+            maxProfit = max(maxProfit,(prices[i] - minPrice));
+        }
+        return maxProfit;
+    }
+};
+      
+
+
+
+
+
+
+    }
+};
