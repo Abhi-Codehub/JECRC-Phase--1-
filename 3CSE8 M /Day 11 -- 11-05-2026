@@ -60,3 +60,58 @@ int main()
 
     return 0;
 }
+
+LeetCode 242
+Valid Anagram 
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+
+        if(s.size() != t.size()) {
+            return false;
+        }
+
+        sort(s.begin(), s.end());
+        sort(t.begin(), t.end());
+        if(s == t){
+            return true;
+        }else {
+            return false;
+        }
+    }
+};
+
+LeetCode 342
+Reverse String 
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+
+        int left = 0;
+        int right = s.size() - 1;
+
+        while(left < right) {
+            char c = s[right];
+            s[right] = s[left];
+            s[left] = c;
+
+            left++;
+            right--;
+        }
+    }
+};
+
+LeetCode 796
+Rotate String 
+class Solution {
+public:
+    bool rotateString(string s, string goal) {
+
+        if(s.size() != goal.size()){
+            return false;
+        }
+        
+        string doubleString = s + s;
+        return doubleString.contains(goal);
+    }
+};
