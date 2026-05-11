@@ -1,0 +1,28 @@
+LeetCode 189 
+Rotate Array
+class Solution {
+public:
+
+    void rotateArray(vector<int>& nums, int start, int end) {
+        while(start < end) {
+            swap(nums[start], nums[end]);
+            start++;
+            end--;
+        }
+    }
+
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        k = k % n;
+        rotateArray(nums, 0, n - 1); // rotating complete array
+        rotateArray(nums, 0, k - 1); // rotating first k elements
+        rotateArray(nums, k, n - 1); // rotating rest of the array
+    }
+};
+
+// n = 7
+// k = 3
+
+// 0 -- n - 1 index (means full array rotation)
+// 0 -- k - 1 index (rotating it for 3 datas)
+// k -- n - 1 index (rotating the rest of the data)
