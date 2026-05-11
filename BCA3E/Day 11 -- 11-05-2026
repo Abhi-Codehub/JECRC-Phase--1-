@@ -76,35 +76,74 @@ public:
     }
 };
 
-Problem 
-Valid Palindrome 
 #include <iostream>
 using namespace std;
 
-bool isPalindrome(string str) {
-    int start = 0;
-    int end = str.size() - 1;
-    while(start < end) {
-        if(str[start] != str[end]){
-            return false;
-        }
-        start++;
-        end--;
+// bool isPalindrome(string str) {
+//     int start = 0;
+//     int end = str.size() - 1;
+//     while(start < end) {
+//         if(str[start] != str[end]){
+//             return false;
+//         }
+//         start++;
+//         end--;
+//     }
+//     return true;
+// }
+
+// int main()
+// {
+//     string str;
+//     cout << "Enter a String...";
+//     cin >> str;
+    
+//     if(isPalindrome(str)) {
+//         cout << "Given string is a Palindrome String...";
+//     } else {
+//         cout << "Given string is not a Palindrome String...";
+//     }
+
+//     return 0;
+// }
+
+
+int main() {
+    int n;
+    cout << "Enter a size of array...";
+    cin >> n;
+    
+    int arr[n];
+    
+    cout << "Enter the sorted array...";
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
-    return true;
+    int target;
+    cout << "Enter the target element...";
+    cin >> target;
+    
+    // Binary search code
+    int low = 0;
+    int high = n - 1;
+    bool found = false;
+    
+    while(low <= high){
+        int mid = (low + high) / 2;
+        
+        if(arr[mid] == target) {
+            cout << "Element found at index " << mid;
+            found = true;
+            break;
+        } else if (arr[mid] < target){ 
+            low = mid + 1;
+    } else {
+        high = mid - 1;
+    }
 }
 
-int main()
-{
-    string str;
-    cout << "Enter a String...";
-    cin >> str;
-    
-    if(isPalindrome(str)) {
-        cout << "Given string is a Palindrome String...";
-    } else {
-        cout << "Given string is not a Palindrome String...";
-    }
-
-    return 0;
+if(found == false) {
+    cout << "Element not found...";
+}
+return 0;
 }
