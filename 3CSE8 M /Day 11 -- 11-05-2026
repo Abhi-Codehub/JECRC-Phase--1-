@@ -26,3 +26,37 @@ public:
 // 0 -- n - 1 index (means full array rotation)
 // 0 -- k - 1 index (rotating it for 3 datas)
 // k -- n - 1 index (rotating the rest of the data)
+
+Problem -- 2
+Palindrome String 
+#include <iostream>
+using namespace std;
+
+bool isPalindrome(string str) {
+    int start = 0;
+    int end = str.size() - 1;
+    
+    while(start < end) {
+        if(str[start] != str[end]){
+            return false;
+        }
+        start++;
+        end--;
+    }
+    return true;
+}
+
+int main()
+{
+    string str;
+    cout << "Enter a String...";
+    cin >> str;
+    
+    if(isPalindrome(str)) {
+        cout << "Palidrome string";
+    } else{
+        cout <<"Given string is not a palindrome...";
+    }
+
+    return 0;
+}
