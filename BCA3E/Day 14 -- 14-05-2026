@@ -1,0 +1,80 @@
+// Problem -- 1
+// insert the data at the head of the LL 
+class Node{
+public:    
+    int data;
+    Node* next;
+    
+    Node(int new_data) {
+        this->data = new_data;
+        this->next = nullptr;
+    }
+};
+
+Node* head = nullptr;
+
+void insertAtHead(int data) {
+    Node* newNode = new Node(data);
+    newNode->next = head;
+    head = newNode;
+    }
+
+void insertAtTail(int data) {
+    Node* newNode = new Node(data);
+    Node*temp = head;
+    while(temp->next != nullptr) {
+        temp = temp->next;
+    }
+    temp->next = newNode;
+}
+
+void insertAtPosition(int data, int position) {
+    Node* newNode = new Node(data);
+    Node* temp = head;
+    for(int i = 1; i < position - 1; i++) {
+        temp = temp->next;
+    }
+    newNode->next = temp->next;
+    temp->next = newNode;
+}
+
+void display() {
+    Node* temp = head;
+    while(temp != nullptr) {
+        cout << temp->data <<" ";
+        temp = temp->next;
+    }
+    cout << "NULL";
+}
+
+int main()
+{
+    head = new Node(10);
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+    head->next->next->next = new Node(40);
+    //insertAtHead(5);
+    //insertAtTail(50);
+    insertAtPosition(25,3);
+    display();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
