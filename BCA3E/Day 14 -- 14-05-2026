@@ -38,6 +38,25 @@ void insertAtPosition(int data, int position) {
     temp->next = newNode;
 }
 
+void deleteAtHead() {
+    head = head->next;
+}
+
+void deleteAtTail(){
+    Node* temp = head;
+    while(temp->next->next != nullptr) {
+        temp = temp->next;
+    }
+    temp->next = nullptr;
+}
+
+void deleteAtPosition(int position) {
+    Node* temp = head;
+    for(int i = 1; i < position - 1; i++) {
+        temp = temp->next;
+    }
+    temp->next = temp->next->next;
+}
 void display() {
     Node* temp = head;
     while(temp != nullptr) {
@@ -55,7 +74,10 @@ int main()
     head->next->next->next = new Node(40);
     //insertAtHead(5);
     //insertAtTail(50);
-    insertAtPosition(25,3);
+    //insertAtPosition(25,3);
+    //deleteAtHead();
+    //deleteAtTail();
+    deleteAtPosition(3);
     display();
     return 0;
 }
