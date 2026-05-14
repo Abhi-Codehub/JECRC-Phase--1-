@@ -1,1 +1,135 @@
+Tiling Problem 
+Grid -- 4 X N 
+Tile -- 1 X 4 || 4 X 1 
+Recursive Code
+#include <iostream>
+using namespace std;
 
+// Function to count number of ways
+int tile(int n) {
+
+    // Base condition
+    if (n <= 3) {
+        return 1;
+    }
+
+    if (n == 4) {
+        return 2;
+    }
+
+    // Recursive relation
+    return tile(n - 1) + tile(n - 4);
+}
+
+int main() {
+
+    int n;
+
+    cout << "Enter value of n: ";
+    cin >> n;
+
+    cout << "Total ways = " << tile(n);
+
+    return 0;
+}
+
+Count Binary String without Consecutive One's 
+Recursive Solution
+
+#include <iostream>
+using namespace std;
+
+// Function to count binary strings
+int BinaryString(int n) {
+
+    // Base conditions
+    if (n == 0)
+        return 1;
+
+    if (n == 1)
+        return 2;
+
+    // Recursive relation
+    return BinaryString(n - 1) + BinaryString(n - 2);
+}
+
+int main() {
+
+    int n;
+
+    cout << "Enter value of n: ";
+    cin >> n;
+
+    cout << "Total Binary Strings = " << BinaryString(n);
+
+    return 0;
+}
+
+LeetCode 198
+House Robber
+class Solution {
+public:
+
+    int robFrom(vector<int>& nums, int index) {
+        // base condition 
+        if(index >= nums.size()){
+            return 0;
+        }
+
+        // logic
+        int include = nums[index] + robFrom(nums, index + 2);
+        int exclude = robFrom(nums, index + 1);
+
+        return max(include, exclude);
+    }
+
+    int rob(vector<int>& nums) {
+        return robFrom(nums, 0);
+    }
+};
+
+LinkedList 
+#include <iostream>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* next;
+
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+Node* head = NULL;
+
+void traversal() {
+
+    if(head == NULL) {
+        cout << "Linked List is Empty" << endl;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp != NULL) {
+        cout << temp->data << " -> ";
+        temp = temp->next;
+    }
+
+    cout << "NULL" << endl;
+}
+
+int main() {
+
+    head = new Node(10);
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+    head->next->next->next = new Node(40);
+
+    traversal();
+
+    return 0;
+}
