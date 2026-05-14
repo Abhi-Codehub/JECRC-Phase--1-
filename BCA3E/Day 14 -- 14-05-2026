@@ -1,84 +1,369 @@
 // Problem -- 1
-// insert the data at the head of the LL 
-class Node{
-public:    
+// Insert at Head
+
+#include <iostream>
+using namespace std;
+
+class Node {
+public:
     int data;
     Node* next;
-    
-    Node(int new_data) {
-        this->data = new_data;
-        this->next = nullptr;
+
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
     }
 };
 
-Node* head = nullptr;
+Node* head = NULL;
 
 void insertAtHead(int data) {
     Node* newNode = new Node(data);
+
     newNode->next = head;
     head = newNode;
-    }
+}
 
-void insertAtTail(int data) {
-    Node* newNode = new Node(data);
-    Node*temp = head;
-    while(temp->next != nullptr) {
+void display() {
+    Node* temp = head;
+
+    while(temp != NULL) {
+        cout << temp->data << " -> ";
         temp = temp->next;
     }
+
+    cout << "NULL" << endl;
+}
+
+int main() {
+
+    insertAtHead(10);
+    insertAtHead(20);
+    insertAtHead(30);
+
+    display();
+
+    return 0;
+}
+
+Insert at Tail
+#include <iostream>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* next;
+
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+Node* head = NULL;
+
+void insertAtTail(int data) {
+
+    Node* newNode = new Node(data);
+
+    if(head == NULL) {
+        head = newNode;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp->next != NULL) {
+        temp = temp->next;
+    }
+
     temp->next = newNode;
 }
 
-void insertAtPosition(int data, int position) {
-    Node* newNode = new Node(data);
+void display() {
     Node* temp = head;
-    for(int i = 1; i < position - 1; i++) {
+
+    while(temp != NULL) {
+        cout << temp->data << " -> ";
         temp = temp->next;
     }
+
+    cout << "NULL" << endl;
+}
+
+int main() {
+
+    insertAtTail(10);
+    insertAtTail(20);
+    insertAtTail(30);
+
+    display();
+
+    return 0;
+}
+
+Insert at Any Position
+#include <iostream>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* next;
+
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+Node* head = NULL;
+
+void insertAtPosition(int data, int position) {
+
+    if(position <= 0) {
+        cout << "Invalid Position" << endl;
+        return;
+    }
+
+    Node* newNode = new Node(data);
+
+    if(position == 1) {
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
+
+    Node* temp = head;
+
+    for(int i = 1; i < position - 1; i++) {
+
+        if(temp == NULL) {
+            cout << "Position out of range" << endl;
+            return;
+        }
+
+        temp = temp->next;
+    }
+
+    if(temp == NULL) {
+        cout << "Position out of range" << endl;
+        return;
+    }
+
     newNode->next = temp->next;
     temp->next = newNode;
 }
 
+void display() {
+    Node* temp = head;
+
+    while(temp != NULL) {
+        cout << temp->data << " -> ";
+        temp = temp->next;
+    }
+
+    cout << "NULL" << endl;
+}
+
+int main() {
+
+    insertAtPosition(10, 1);
+    insertAtPosition(20, 2);
+    insertAtPosition(30, 2);
+
+    display();
+
+    return 0;
+}
+
+Delete at Head
+#include <iostream>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* next;
+
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+Node* head = NULL;
+
 void deleteAtHead() {
+
+    if(head == NULL) {
+        cout << "List is Empty" << endl;
+        return;
+    }
+
     head = head->next;
 }
 
-void deleteAtTail(){
-    Node* temp = head;
-    while(temp->next->next != nullptr) {
-        temp = temp->next;
-    }
-    temp->next = nullptr;
-}
-
-void deleteAtPosition(int position) {
-    Node* temp = head;
-    for(int i = 1; i < position - 1; i++) {
-        temp = temp->next;
-    }
-    temp->next = temp->next->next;
-}
 void display() {
+
     Node* temp = head;
-    while(temp != nullptr) {
-        cout << temp->data <<" ";
+
+    while(temp != NULL) {
+        cout << temp->data << " -> ";
         temp = temp->next;
     }
-    cout << "NULL";
+
+    cout << "NULL" << endl;
 }
 
-int main()
-{
+int main() {
+
     head = new Node(10);
     head->next = new Node(20);
     head->next->next = new Node(30);
-    head->next->next->next = new Node(40);
-    //insertAtHead(5);
-    //insertAtTail(50);
-    //insertAtPosition(25,3);
-    //deleteAtHead();
-    //deleteAtTail();
-    deleteAtPosition(3);
+
+    deleteAtHead();
+
     display();
+
+    return 0;
+}
+
+Delete at Tail
+#include <iostream>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* next;
+
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+Node* head = NULL;
+
+void deleteAtTail() {
+
+    if(head == NULL) {
+        cout << "List is Empty" << endl;
+        return;
+    }
+
+    if(head->next == NULL) {
+        head = NULL;
+        return;
+    }
+
+    Node* temp = head;
+
+    while(temp->next->next != NULL) {
+        temp = temp->next;
+    }
+
+    temp->next = NULL;
+}
+
+void display() {
+
+    Node* temp = head;
+
+    while(temp != NULL) {
+        cout << temp->data << " -> ";
+        temp = temp->next;
+    }
+
+    cout << "NULL" << endl;
+}
+
+int main() {
+
+    head = new Node(10);
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+
+    deleteAtTail();
+
+    display();
+
+    return 0;
+}
+
+Delete at Any Position
+#include <iostream>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* next;
+
+    Node(int data) {
+        this->data = data;
+        this->next = NULL;
+    }
+};
+
+Node* head = NULL;
+
+void deleteAtPosition(int position) {
+
+    if(head == NULL || position <= 0) {
+        cout << "Invalid Operation" << endl;
+        return;
+    }
+
+    if(position == 1) {
+        head = head->next;
+        return;
+    }
+
+    Node* temp = head;
+
+    for(int i = 1; i < position - 1; i++) {
+
+        if(temp->next == NULL) {
+            cout << "Position out of range" << endl;
+            return;
+        }
+
+        temp = temp->next;
+    }
+
+    if(temp->next == NULL) {
+        cout << "Position out of range" << endl;
+        return;
+    }
+
+    temp->next = temp->next->next;
+}
+
+void display() {
+
+    Node* temp = head;
+
+    while(temp != NULL) {
+        cout << temp->data << " -> ";
+        temp = temp->next;
+    }
+
+    cout << "NULL" << endl;
+}
+
+int main() {
+
+    head = new Node(10);
+    head->next = new Node(20);
+    head->next->next = new Node(30);
+
+    deleteAtPosition(2);
+
+    display();
+
     return 0;
 }
 
@@ -134,20 +419,3 @@ public:
     }
     
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
