@@ -1,0 +1,30 @@
+Reverse an Array using Stacks
+#include <iostream>
+#include <stack>
+using namespace std;
+int main()
+{
+    int arr[] = {10,20,30,40,50};
+    int n = 5;
+    
+    stack<int> st;
+    // Java -- Stack<Integer> st = new Stack<>();
+    
+    // Push the data into the Stack
+    for(int i = 0; i < n; i++) {
+        st.push(arr[i]);
+    }
+    
+    // Pop out the top most data from the stack and put into the array
+    for(int i = 0; i < n; i++) {
+        arr[i] = st.top();
+        st.pop();
+    }
+    
+    cout <<"Reversed Array...";
+    
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << " ";
+    }
+    return 0;
+}
