@@ -28,3 +28,68 @@ int main()
     }
     return 0;
 }
+
+Reverse a String 
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        stack<char> st;
+
+        for(int i = 0; i < s.size(); i++) {
+            st.push(s[i]);
+        } 
+        int i = 0;
+        while(!st.empty()) {
+            s[i++] = st.top();
+            st.pop();
+        }
+    }
+};
+
+LeetCode 20
+class Solution {
+public:
+    bool isValid(string s) {
+        stack<char> st;
+
+        for(char c : s) {
+            if(c == '(')
+                st.push(')');
+            else if (c == '[')
+                st.push(']');
+            else if (c == '{')
+                st.push('}');        
+        
+        else {
+            if(st.empty() || st.top() != c){
+                return false;
+            } st.pop();
+        }
+        }
+        return st.empty();
+    }
+};
+
+Next Greater Element 
+class Solution {
+  public:
+    vector<int> nextLargerElement(vector<int>& arr) {
+        // code here
+        int n = arr.size();
+        stack<int> st;
+        vector<int> nge(n);
+        
+        for(int i = n - 1; i >= 0; i--) {
+            while(!st.empty() && st.top() <=arr[i]) {
+                st.pop();
+            }
+            if(st.empty()) {
+                nge[i] = -1;
+            } else {
+                nge[i] = st.top();
+            }
+            st.push(arr[i]);
+        }
+        return nge;
+    }
+};
