@@ -1,0 +1,78 @@
+#include <iostream>
+using namespace std;
+
+// Node class
+class Node {
+public:
+    int data;
+    Node* left;
+    Node* right;
+
+    // Constructor
+    Node(int value) {
+        data = value;
+        left = nullptr;
+        right = nullptr;
+    }
+};
+
+// Inorder Traversal
+void inorder(Node* root) {
+    // Base condition
+    if(root == nullptr) {
+        return;
+    }
+
+    inorder(root->left);
+    cout << root->data << " ";
+    inorder(root->right);
+}
+
+// Preorder Traversal
+void preorder(Node* root) {
+    if(root == nullptr) {
+        return;
+    }
+
+    cout << root->data << " ";
+    preorder(root->left);
+    preorder(root->right);
+}
+
+// Postorder Traversal
+void postorder(Node* root) {
+    if(root == nullptr) {
+        return;
+    }
+
+    postorder(root->left);
+    postorder(root->right);
+    cout << root->data << " ";
+}
+
+int main() {
+
+    // Creating nodes
+    Node* root = new Node(1);
+
+    root->left = new Node(2);
+    root->right = new Node(3);
+
+    root->left->left = new Node(4);
+    root->left->right = new Node(5);
+
+    cout << "Inorder Traversal: ";
+    inorder(root);
+
+    cout << endl;
+
+    cout << "Preorder Traversal: ";
+    preorder(root);
+
+    cout << endl;
+
+    cout << "Postorder Traversal: ";
+    postorder(root);
+
+    return 0;
+}
