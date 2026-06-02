@@ -81,7 +81,7 @@ public:
     }
 };
 
-LeetCode 342
+LeetCode 344
 Reverse String 
 class Solution {
 public:
